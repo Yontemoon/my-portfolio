@@ -1,0 +1,14 @@
+import Link from 'next/link'
+
+
+const Navbar = () => {
+    return (
+        <div className='flex flex-row '>
+            <Link href="/">Home</Link>
+            <Link href="/projects">Project</Link>
+            <Link href="/contact">Contact</Link>
+      </div>
+    );
+};
+
+export default Navbar;
