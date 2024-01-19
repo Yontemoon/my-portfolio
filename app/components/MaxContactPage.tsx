@@ -47,7 +47,7 @@ const MaxContactPage = () => {
             {/* <p>Would love to get in contact and possibly connect!</p> */}
             <form onSubmit={handleSubmit(onSubmit)} ref={form} className="w-1/2 justify-center">
                 <div className="flex flex-col mb-2">
-                    <label className="mb-1">Name:</label>
+                    <label className="mb-1 text-xl">Name:</label>
                     <input 
                         {...register("from_name", {required: true, maxLength: 20, minLength: 3})}
                         type="text"
@@ -55,7 +55,7 @@ const MaxContactPage = () => {
                     />
                 </div>
                 <div className="flex flex-col mb-2">
-                    <label className="mb-1">Email:</label>
+                    <label className="mb-1 text-xl">Email:</label>
                     <input 
                         type="email"
                         {...register("from_email", {required: true, maxLength: 25, minLength: 5})}
@@ -63,7 +63,7 @@ const MaxContactPage = () => {
                     />
                 </div>
                 <div>
-                    <label className="mb-2">Message:</label>
+                    <label className="mb-2 text-xl">Message:</label>
                     <textarea 
                         {...register("message", {required: true, maxLength: 300, minLength: 10})}
                         className="rounded w-full p-2 mt-1"
@@ -72,7 +72,7 @@ const MaxContactPage = () => {
                 </div>
                 <button 
                     type="submit"
-                    className="p-2 flex justify-center rounded mt-4 w-full bg-white text-black"
+                    className="p-2 flex justify-center rounded mt-4 w-full bg-white text-black text-xl"
                 >
                     Submit
                 </button>

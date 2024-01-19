@@ -9,6 +9,10 @@ import MaxProjectsPage from "./components/MaxProjectsPage";
 import MaxContactPage from "./components/MaxContactPage";
 import MiniPage from "./components/MiniPage";
 import { usePathname } from "next/navigation";
+import layers from "./icons/layers.svg"
+import mail from "./icons/mail.svg"
+import user from "./icons/user.svg"
+
 
 export default function Home() {
 
@@ -33,7 +37,7 @@ export default function Home() {
 
             {current === "about" ?
               <MaxAboutPage/> :
-              <MiniPage header="About Me"/>
+              <MiniPage header="About Me" icon={user}/>
             }
 
         </div>
@@ -41,14 +45,14 @@ export default function Home() {
 
           {current === "projects" ? 
             <MaxProjectsPage/> :
-            <MiniPage header="My Projects"/>
+            <MiniPage header="My Projects" icon={layers}/>
           }
         </div>
 
         <div style={{ background: "#805E73"}} className="mini-navbar rounded-2xl" id="contact" onClick={()=> setCurrent("contact")}>
           {current === "contact" ? 
             <MaxContactPage/> :
-            <MiniPage header="Contact Me"/>
+            <MiniPage header="Contact Me" icon={mail}/>
           }
         </div>
         <div id="home" style={{width:"100%"}} onClick={()=> setCurrent("")}>

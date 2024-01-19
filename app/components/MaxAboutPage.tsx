@@ -6,27 +6,25 @@ const MaxAboutPage = () => {
             <h1 className='flex justify-center'>About Me</h1>
             <br/>
             <br/>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas porttitor quam, 
-                vel viverra nibh. Quisque interdum metus et libero fermentum, vel efficitur leo blandit. 
-                Vivamus feugiat molestie auctor. Aliquam sed feugiat nulla. Nunc et justo at velit tincidunt egestas. 
-                Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer a tellus luctus, tempor tortor dignissim, 
-                tempus ex. Maecenas vulputate maximus commodo. Praesent semper turpis risus, nec convallis risus vulputate sed. 
-                Ut odio massa, ullamcorper in mattis id, mattis ac urna. Suspendisse quam felis, consequat non justo eget, condimentum 
-                sodales mauris. Ut vulputate id felis rhoncus dapibus.
+            <p className='text-lg'>
+                I am junior developer currently based in Seattle, Washington.
             </p>
             <br/>
-            <p>
-                Aliquam dignissim interdum ante eget accumsan. Suspendisse potenti. Nam sit amet dui vitae orci faucibus bibendum. 
-                Nullam nec lobortis diam. Phasellus tincidunt imperdiet feugiat. Aliquam sit amet sodales mauris. Praesent vehicula 
-                velit quis finibus molestie. Quisque gravida erat tortor, a pellentesque ligula finibus ut. In hac habitasse platea 
-                dictumst. Mauris volutpat enim lectus. 
+            <p className='text-lg'>
+                My joy comes from creating applications that not only make users' lives easier but also deliver seamless 
+                experiences from frontend to backend. As a junior developer, I thrive on tackling intricate challenges 
+                in software development.
             </p>
             <br/>
-            <p>
-                Aliquam dui metus, fringilla ac dignissim suscipit, viverra eu leo. Aenean vitae sodales quam, vel finibus felis. 
-                Sed nec ante lorem. Curabitur condimentum ex lacus, eget accumsan metus elementum vel. Suspendisse quis eros sem. 
-                Nam eget congue arcu, at mollis diam. Aenean feugiat luctus leo, et pretium enim. 
+            <p className='text-lg'>
+            I find satisfaction in architecting and implementing fullstack solutions for large-scale projects. 
+            This holistic approach allows me to contribute to the entire software stack, ensuring robust and scalable applications. 
+            My goal is to continue honing my skills in both frontend and backend development, making meaningful contributions to the 
+            dynamic field of fullstack engineering.
+            </p>
+            <br/>
+            <p className='text-lg'>
+                When I'm not on the computer banging my head against the screen, I like to unwind by watching movies, practicing jui-jitsu, and playing video games.
             </p>
             
         </main>
