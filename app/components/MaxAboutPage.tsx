@@ -11,7 +11,7 @@ const MaxAboutPage = () => {
             </p>
             <br/>
             <p className='text-lg'>
-                My joy comes from creating applications that not only make users' lives easier but also deliver seamless 
+                My joy comes from creating applications that not only make users&apos; lives easier but also deliver seamless 
                 experiences from frontend to backend. As a junior developer, I thrive on tackling intricate challenges 
                 in software development.
             </p>
@@ -24,7 +24,7 @@ const MaxAboutPage = () => {
             </p>
             <br/>
             <p className='text-lg'>
-                When I'm not on the computer banging my head against the screen, I like to unwind by watching movies, practicing jui-jitsu, and playing video games.
+                When I&apos;m not on the computer banging my head against the screen, I like to unwind by watching movies, practicing jui-jitsu, and playing video games.
             </p>
             
         </main>
