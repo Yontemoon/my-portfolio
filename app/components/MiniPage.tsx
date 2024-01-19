@@ -3,9 +3,9 @@ import React from 'react';
 const MiniPage = ({header}: {header: string}) => {
     return (
         <main className='flex items-end justify-center'>
-            <div className="text-center p-4">
+            <h3 className="text-center p-4 text-white">
                 {header}
-            </div>
+            </h3>
         </main>
     );
 };

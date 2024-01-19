@@ -13,9 +13,17 @@ import { usePathname } from "next/navigation";
 export default function Home() {
 
   const [current, setCurrent] = useState(usePathname().substring(1))
+  const pathName = usePathname().substring(1)
+
 
   useEffect(()=> {
     console.log("current", current)
+    if (current !== pathName) {
+      setCurrent(pathName)
+    }
+
+
+    
   })
 
   return (

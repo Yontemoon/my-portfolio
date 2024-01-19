@@ -40,22 +40,43 @@ const MaxContactPage = () => {
     }
 
     return (
-        <div>
-            <h1>Contact Me</h1>
-            <form onSubmit={handleSubmit(onSubmit)} ref={form}>
-                <div>
-                    <label>Name:</label>
-                    <input {...register("from_name")}/>
+        <div className="w-full m-4 flex flex-col items-center text-white">
+            <br/>
+            <h1 className="flex justify-center underline m-4">Contact Me</h1>
+            <br/>
+            {/* <p>Would love to get in contact and possibly connect!</p> */}
+            <form onSubmit={handleSubmit(onSubmit)} ref={form} className="w-1/2 justify-center">
+                <div className="flex flex-col mb-2">
+                    <label className="mb-1">Name:</label>
+                    <input 
+                        {...register("from_name", {required: true, maxLength: 20, minLength: 3})}
+                        type="text"
+                        className="rounded p-2"
+                    />
+                </div>
+                <div className="flex flex-col mb-2">
+                    <label className="mb-1">Email:</label>
+                    <input 
+                        type="email"
+                        {...register("from_email", {required: true, maxLength: 25, minLength: 5})}
+                        className="rounded p-2"
+                    />
                 </div>
                 <div>
-                    <label>Email:</label>
-                    <input type="email"{...register("from_email")}/>
+                    <label className="mb-2">Message:</label>
+                    <textarea 
+                        {...register("message", {required: true, maxLength: 300, minLength: 10})}
+                        className="rounded w-full p-2 mt-1"
+                        rows={5}
+                    />
                 </div>
-                <div>
-                    <label>Message:</label>
-                    <input type="textbox"{...register("message")}/>
-                </div>
-                <button type="submit">Submit</button>
+                <button 
+                    type="submit"
+                    className="p-2 flex justify-center rounded mt-4 w-full bg-white text-black"
+                >
+                    Submit
+                </button>
+
             </form>
         </div>
     );

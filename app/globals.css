@@ -2,39 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
-
 .mini-navbar {
   width: 100%;
   display: flex;
   justify-content: center;
+}
 
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
 
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
 }
 
 #home {
   margin: 1rem;
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+  border-color: rgba(182, 8, 8, 0.8);
+  outline:  solid 1px rgb(165, 165, 165);
+}
+
+textarea, input {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  --tw-bg-opacity: 0.4;
+
+}
+
+button {
+  background-color: #ddd4d4;
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  z-index: 100;
+  border: none;
+  transition-duration: 300ms;
+}
+
+button:hover {
+  background-color: rgb(119, 116, 116);
+  color: white;
 }

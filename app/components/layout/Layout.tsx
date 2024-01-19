@@ -24,8 +24,6 @@ const Layout = ({ children }: any) => {
     // if(active === null) return
 
     const currentIndex = routes.findIndex(route => route === pathUrl.substring(1))
-    // console.log("active", active)
-    // console.log("currentindex", currentIndex)
     if (active !== currentIndex) {
       setActive(currentIndex)
     }
