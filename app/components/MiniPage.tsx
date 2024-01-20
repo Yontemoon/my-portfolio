@@ -6,7 +6,7 @@ const MiniPage = ({header, icon}:
     icon: any}
 ) => {
     return (
-        <main className='flex items-end justify-center'>
+        <main className='flex items-end justify-center fade-animation'>
             <div className='flex flex-col items-center mb-8'>
                 <Image src={icon} alt="icon"/>
                 <h2 className="text-center p-4 text-white ">

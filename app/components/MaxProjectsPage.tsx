@@ -5,7 +5,7 @@ const MaxProjectsPage = () => {
 
 
     return (
-        <main className="text-white m-6  flex flex-col items-center" style={{overflowY: "scroll", scrollBehavior: "smooth" }}>
+        <main className="fade-animation text-white m-6  flex flex-col items-center" style={{overflowY: "scroll", scrollBehavior: "smooth" }}>
 
             <h1>My Projects</h1>
 

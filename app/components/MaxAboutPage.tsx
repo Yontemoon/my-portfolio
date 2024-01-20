@@ -1,8 +1,10 @@
-import React from 'react';
+// import TextFade from "./TextFade";
+
 
 const MaxAboutPage = () => {
     return (
-        <main className='m-4 max-w-screen-sm'>
+        // <TextFade>
+        <main className='m-4 max-w-screen-sm fade-animation'>
             <h1 className='flex justify-center'>About Me</h1>
             <br/>
             <br/>
@@ -29,6 +31,7 @@ const MaxAboutPage = () => {
             </p>
             
         </main>
+        // </TextFade>
     );
 };
 

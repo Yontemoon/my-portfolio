@@ -40,7 +40,7 @@ const MaxContactPage = () => {
     }
 
     return (
-        <div className="w-full m-4 flex flex-col items-center text-white">
+        <div className="fade-animation w-full m-4 flex flex-col items-center text-white">
             <br/>
             <h1 className="flex justify-center underline m-4">Contact Me</h1>
             <br/>

@@ -1,19 +1,17 @@
 "use client";
 import React, { useEffect } from "react";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 import { routes } from "../../lib/routes";
 import "./layout.css"
 
 const Layout = ({ children }: any) => {
-  // console.log("children: ", children);
+  console.log("children: ", children);
   const [active, setActive] = useState<number | null>(null); //set this to null
 
   const router = useRouter();
   const pathUrl = usePathname();
-//   console.log(pathUrl)
-  // console.log("pathUrl:", pathUrl)
 
   const columnVariants = {
     initial: { flex: 1 },

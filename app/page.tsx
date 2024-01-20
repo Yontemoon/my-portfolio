@@ -1,7 +1,6 @@
 "use client"
 
 import Layout from "./components/layout/Layout";
-import TextFade from "./components/TextFade";
 import { useEffect, useState } from "react";
 import { routes } from "./lib/routes"
 import MaxAboutPage from "./components/MaxAboutPage";
@@ -16,6 +15,8 @@ import aboutIcon from "./icons/about-icon.svg"
 
 export default function Home() {
 
+
+  //State is probably not the best here.... maybe ref? 
   const [current, setCurrent] = useState(usePathname().substring(1))
   const pathName = usePathname().substring(1)
 
