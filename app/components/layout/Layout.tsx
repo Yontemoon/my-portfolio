@@ -4,6 +4,7 @@ import { easeInOut, motion } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 import { routes } from "../../lib/routes";
+import "./layout.css"
 
 const Layout = ({ children }: any) => {
   // console.log("children: ", children);
@@ -50,7 +51,7 @@ const Layout = ({ children }: any) => {
       {React.Children.map(children, (child, i) => {
         const isActive = i === active;
         const cursorStyle = isActive ? "auto" : "pointer"; 
-        const boxShadow = i === 3 ? "" : "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
+        
         return (
           <motion.div
             key={i}
@@ -59,7 +60,7 @@ const Layout = ({ children }: any) => {
             animate={i === 3 && isActive ? "initial" : isActive ? "expanded" : "initial"}
             transition={{duration: 0.5, delay: 0.2}}
             onClick={() => handleRoute(i, routes[i])}
-            style={{ overflow: "hidden", cursor: cursorStyle , display: "flex", margin: "1em", flex: 1, position: "relative", borderRadius: "25px", boxShadow: boxShadow}}
+            style={{ overflow: "hidden", cursor: cursorStyle , display: "flex", margin: "1em", flex: 1, position: "relative", borderRadius: "25px"}}
           >
             {child}
           </motion.div>

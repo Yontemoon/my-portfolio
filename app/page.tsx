@@ -9,9 +9,9 @@ import MaxProjectsPage from "./components/MaxProjectsPage";
 import MaxContactPage from "./components/MaxContactPage";
 import MiniPage from "./components/MiniPage";
 import { usePathname } from "next/navigation";
-import layers from "./icons/layers.svg"
-import mail from "./icons/mail.svg"
-import user from "./icons/user.svg"
+import projectIcon from "./icons/project-icon.svg"
+import contactIcon from "./icons/contact-icon.svg"
+import aboutIcon from "./icons/about-icon.svg"
 
 
 export default function Home() {
@@ -21,13 +21,10 @@ export default function Home() {
 
 
   useEffect(()=> {
-    console.log("current", current)
+    // console.log("current", current)
     if (current !== pathName) {
       setCurrent(pathName)
     }
-
-
-    
   })
 
   return (
@@ -37,7 +34,7 @@ export default function Home() {
 
             {current === "about" ?
               <MaxAboutPage/> :
-              <MiniPage header="About Me" icon={user}/>
+              <MiniPage header="About Me" icon={aboutIcon}/>
             }
 
         </div>
@@ -45,14 +42,14 @@ export default function Home() {
 
           {current === "projects" ? 
             <MaxProjectsPage/> :
-            <MiniPage header="My Projects" icon={layers}/>
+            <MiniPage header="My Projects" icon={projectIcon}/>
           }
         </div>
 
         <div style={{ background: "#805E73"}} className="mini-navbar rounded-2xl" id="contact" onClick={()=> setCurrent("contact")}>
           {current === "contact" ? 
             <MaxContactPage/> :
-            <MiniPage header="Contact Me" icon={mail}/>
+            <MiniPage header="Contact Me" icon={contactIcon}/>
           }
         </div>
         <div id="home" style={{width:"100%"}} onClick={()=> setCurrent("")}>

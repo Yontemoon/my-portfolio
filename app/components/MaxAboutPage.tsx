@@ -24,7 +24,8 @@ const MaxAboutPage = () => {
             </p>
             <br/>
             <p className='text-lg'>
-                When I&apos;m not on the computer banging my head against the screen, I like to unwind by watching movies, practicing jui-jitsu, and playing video games.
+                When I&apos;m not on the computer banging my head against the screen, I like to unwind by watching movies, 
+                practicing jui-jitsu, and going for long walks around the neighborhood.
             </p>
             
         </main>
