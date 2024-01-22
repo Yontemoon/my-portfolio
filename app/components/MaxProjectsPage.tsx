@@ -1,16 +1,18 @@
 import ProjectLink from "./ProjectLink";
 import templateImg from "../images/template-image.jpg"
+import ProjectIcon from "../icons/ProjectIcon";
 
 const MaxProjectsPage = () => {
 
 
     return (
-        <main className="fade-animation text-white m-6  flex flex-col items-center" style={{overflowY: "scroll", scrollBehavior: "smooth" }}>
+        <main className="fade-animation flex flex-col items-center text-white m-6" style={{overflowY: "scroll", scrollBehavior: "smooth" }}>
+            <div className="m-5">
+                <ProjectIcon color="white" width={40}/>
+            </div>
+                <h1>My Projects</h1>
 
-            <h1>My Projects</h1>
 
-            <br/>
-            <br/>
             <div className="flex flex-col items-center p-4">
                 <ProjectLink 
                     title={"Movie List"}
@@ -45,9 +47,9 @@ const MaxProjectsPage = () => {
                     link_to_site="youtube.com"
                 />
             </div>
-            <p className="text-start">
+            {/* <p className="text-start">
                 View My Résumé
-            </p>
+            </p> */}
         </main>
     );
 };

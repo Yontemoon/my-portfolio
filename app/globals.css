@@ -21,6 +21,15 @@ h3 {
   font-size: 1.2rem;
 }
 
+a {
+  font-weight: bold;
+  transition-duration: 300ms;
+}
+a:hover {
+  color: #9C6615;
+
+}
+
 #home {
   margin: 1rem;
 }
@@ -51,7 +60,6 @@ button:hover {
   background-color: rgb(119, 116, 116);
   color: white;
 }
-
 
 
 @keyframes fade-inout {

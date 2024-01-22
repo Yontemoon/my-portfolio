@@ -7,7 +7,7 @@ import { routes } from "../../lib/routes";
 import "./layout.css"
 
 const Layout = ({ children }: any) => {
-  console.log("children: ", children);
+  // console.log("children: ", children);
   const [active, setActive] = useState<number | null>(null); //set this to null
 
   const router = useRouter();

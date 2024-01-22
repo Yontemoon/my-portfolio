@@ -11,7 +11,9 @@ import { usePathname } from "next/navigation";
 import projectIcon from "./icons/project-icon.svg"
 import contactIcon from "./icons/contact-icon.svg"
 import aboutIcon from "./icons/about-icon.svg"
-
+import AboutIcon from "./icons/AboutIcon";
+import ContactIcon from "./icons/ContactIcon";
+import ProjectIcon from "./icons/ProjectIcon";
 
 export default function Home() {
 
@@ -35,31 +37,44 @@ export default function Home() {
 
             {current === "about" ?
               <MaxAboutPage/> :
-              <MiniPage header="About Me" icon={aboutIcon}/>
+              <MiniPage header="About Me">
+                <AboutIcon color="white" width={35}/>
+              </MiniPage>
             }
 
         </div>
-        <div style={{ background: "#4E4D5C"}} id="projects" className="mini-navbar  rounded-2xl" onClick={()=> setCurrent("projects")}>
+        <div style={{ background: "#4E4D5C"}} id="projects" className="mini-navbar rounded-2xl" onClick={()=> setCurrent("projects")}>
 
           {current === "projects" ? 
             <MaxProjectsPage/> :
-            <MiniPage header="My Projects" icon={projectIcon}/>
+            <MiniPage header="My Projects">
+              <ProjectIcon color="white" width={35}/>
+            </MiniPage>
           }
         </div>
 
         <div style={{ background: "#805E73"}} className="mini-navbar rounded-2xl" id="contact" onClick={()=> setCurrent("contact")}>
           {current === "contact" ? 
             <MaxContactPage/> :
-            <MiniPage header="Contact Me" icon={contactIcon}/>
+            <MiniPage header="Contact Me">
+              <ContactIcon color="white" width={35}/>
+            </MiniPage>
           }
         </div>
-        <div id="home" style={{width:"100%"}} onClick={()=> setCurrent("")}>
-          <h1 className="">
-            Monte Yoon
-          </h1>
-          <h2>
-            Software Engineer.
-          </h2>
+        <div  id="home" style={{width:"100%"}} onClick={()=> setCurrent("")}>
+          {current === "" ? 
+            <div className="fade-animation">
+              <h1 className="">
+                Monte Yoon
+              </h1>
+              <h2>
+                Software Engineer.
+              </h2>
+            </div > :
+            <h1 className="fade-animation">
+              Monte Yoon
+            </h1>
+          }
       </div>
       </Layout>
 

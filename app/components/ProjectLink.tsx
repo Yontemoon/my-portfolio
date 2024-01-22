@@ -4,6 +4,7 @@ import Link from 'next/link';
 import arrow from "../icons/arrow-up-right.svg"
 import bigArrow from "../icons/big-arrow-up-right.svg"
 import { useState } from 'react';
+import ArrowUpRight from '../icons/ArrowUpRight';
 
 type PropTypes = {
     title: string
@@ -16,14 +17,18 @@ type PropTypes = {
 
 const ProjectLink = ({title, project_description, descriptors, image, link_to_case, link_to_site}: PropTypes) => {
 
-    const [showArrow, setShowArrow] = useState(arrow)
+    const [isHovered, setIsHovered] = useState(false)
 
     return (
-        <main className='flex w-3/4 justify-center p-4  m-5 cursor-pointer rounded hover:bg-opacity-30 hover:bg-gray-500 hover:shadow-2xl duration-75' onMouseOver={() => setShowArrow(bigArrow)} onMouseOut={() => setShowArrow(arrow)}>
+        <main 
+            className='flex w-3/4 justify-center p-4  m-5 cursor-pointer rounded hover:bg-opacity-30 hover:bg-gray-500 hover:shadow-2xl duration-700' 
+            onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
             <div className='flex flex-col mr-2'>
                 <div className='flex text-center items-center mb-2'>
                     <h2 className='mr-2'>{title}</h2>
-                    <Image src={showArrow} alt="arrow" className='overflow-hidden duration-75'/>
+                    {/* <div> */}
+                        {!isHovered ? <ArrowUpRight width="25" height="25"color="white"/> : <ArrowUpRight width="35" height="35" color="white"/>}
+                    {/* </div> */}
                 </div>
                 <div className='flex gap-2 mb-2'>
                     {descriptors.map((descriptor) => (
