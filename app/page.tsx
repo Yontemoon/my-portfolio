@@ -14,12 +14,14 @@ import aboutIcon from "./icons/about-icon.svg"
 import AboutIcon from "./icons/AboutIcon";
 import ContactIcon from "./icons/ContactIcon";
 import ProjectIcon from "./icons/ProjectIcon";
+import BackArrow from "./icons/back-arrow";
 
 export default function Home() {
 
 
   //State is probably not the best here.... maybe ref? 
   const [current, setCurrent] = useState(usePathname().substring(1))
+  const [showBack, setShowBack] = useState(false)
   const pathName = usePathname().substring(1)
 
 
@@ -61,19 +63,38 @@ export default function Home() {
             </MiniPage>
           }
         </div>
-        <div  id="home" style={{width:"100%"}} onClick={()=> setCurrent("")}>
+        <div 
+          id="home" 
+          style={{width:"100%"}} 
+          onClick={()=> setCurrent("")} 
+          onMouseOver={() => setShowBack(true)} 
+          onMouseOut={() => setShowBack(false)}
+        >
           {current === "" ? 
-            <div className="fade-animation">
+            <div className="name-fade-animation">
               <h1 className="">
                 Monte Yoon
               </h1>
               <h2>
                 Software Engineer.
               </h2>
-            </div > :
-            <h1 className="fade-animation">
-              Monte Yoon
-            </h1>
+            </div> :
+            <div 
+              className="whitespace-nowrap relative h-full" 
+
+            >
+              <h1 className="name-fade-animation -rotate-90 absolute left-1 top-20">
+                Monte Yoon
+              </h1>
+              <div id="exitIcon" className={showBack ? `showExit exitIcon` : `exitIcon`}>
+                {
+                  <div className={` absolute bottom-0 right-0`} >
+                    <BackArrow width={28}/>
+                  </div> 
+                }
+              </div>
+
+            </div>
           }
       </div>
       </Layout>
