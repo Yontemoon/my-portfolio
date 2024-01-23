@@ -89,7 +89,7 @@ export default function Home() {
               <div id="exitIcon" className={showBack ? `showExit exitIcon` : `exitIcon`}>
                 {
                   <div className={` absolute bottom-0 right-0`} >
-                    <BackArrow width={28}/>
+                    <BackArrow width={44}/>
                   </div> 
                 }
               </div>

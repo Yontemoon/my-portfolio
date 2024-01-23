@@ -4,14 +4,18 @@ const BackArrow = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={props.width}
-    fill="currentColor"
-    style={{
-      "--darkreader-inline-fill": "currentColor",
-    }}
-    viewBox="-2 -2 24 24"
+    height={props.width}
+    fill="none"
+    stroke="#000"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1.5}
+    className="feather feather-arrow-left-circle"
+    viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M5.293 9.293a.997.997 0 0 0 0 1.414l4.243 4.243a1 1 0 1 0 1.414-1.414L8.414 11H14a1 1 0 0 0 0-2H8.414l2.536-2.536A1 1 0 1 0 9.536 5.05L5.293 9.293zM10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z" />
+    <circle cx={12} cy={12} r={10} />
+    <path d="m12 8-4 4 4 4M16 12H8" />
   </svg>
 )
 export default BackArrow
