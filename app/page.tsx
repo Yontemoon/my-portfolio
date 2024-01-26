@@ -78,14 +78,14 @@ export default function Home() {
               </h2>
             </div> :
             <div 
-              className="h-full" 
+              className="relative m-0"
             >
-              <h1 className="name-fade-animation fixed lg:-rotate-90 lg:-right-20 lg:top-20 z-20" >
+              <h1 className="name-fade-animation fixed lg:-rotate-90 lg:-right-20 lg:top-20 z-30 lg:mr-1 lg:mt-3 text-nowrap">
                 Monte Yoon
               </h1>
               <div id="exitIcon" className={showBack ? `showExit exitIcon` : `exitIcon`}>
                 {
-                  <div className={`absolute bottom-0 right-0`} >
+                  <div className={`fixed bottom-0 right-0 m-2`} >
                     <BackArrow width={44}/>
                   </div> 
                 }

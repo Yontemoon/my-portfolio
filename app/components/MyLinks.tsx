@@ -19,7 +19,7 @@ const MyLinks = ({current}: {current: string}) => {
                     </a>
                 </span> 
                 :
-                <div className="name-fade-animation fixed lg:right-0 lg:bottom-32 z-10">
+                <div className="name-fade-animation fixed lg:right-0 lg:bottom-32 lg:mr-1 bottom-0 right-32 z-20 flex flex-row lg:flex-col">
                     <a href="https://letterboxd.com/Holycrabs/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
                         <Linkedin/>
                     </a>
