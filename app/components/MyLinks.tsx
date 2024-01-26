@@ -1,6 +1,7 @@
 import LetterBoxd from "../icons/LetterBoxedLogo";
 import Linkedin from "../icons/LinkedinIcon";
 import Github from "../icons/GithubIcon";
+
 const MyLinks = ({current}: {current: string}) => {
     return (
         <div className="name-fade-animation">
