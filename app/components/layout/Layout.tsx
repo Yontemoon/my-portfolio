@@ -45,7 +45,7 @@ const Layout = ({ children }: any) => {
   };
 
   return (
-    <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+    <div className="flex flex-col h-screen w-screen lg:flex-row">
       {React.Children.map(children, (child, i) => {
         const isActive = i === active;
         const cursorStyle = isActive ? "auto" : "pointer"; 

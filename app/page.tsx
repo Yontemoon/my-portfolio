@@ -2,19 +2,16 @@
 
 import Layout from "./components/layout/Layout";
 import { useEffect, useState } from "react";
-import { routes } from "./lib/routes"
 import MaxAboutPage from "./components/MaxAboutPage";
 import MaxProjectsPage from "./components/MaxProjectsPage";
 import MaxContactPage from "./components/MaxContactPage";
 import MiniPage from "./components/MiniPage";
 import { usePathname } from "next/navigation";
-import projectIcon from "./icons/project-icon.svg"
-import contactIcon from "./icons/contact-icon.svg"
-import aboutIcon from "./icons/about-icon.svg"
 import AboutIcon from "./icons/AboutIcon";
 import ContactIcon from "./icons/ContactIcon";
 import ProjectIcon from "./icons/ProjectIcon";
 import BackArrow from "./icons/back-arrow";
+import MyLinks from "./components/MyLinks";
 
 export default function Home() {
 
@@ -33,8 +30,9 @@ export default function Home() {
   })
 
   return (
-    <div className="flex w-screen h-full box-border">
+    <div className="flex w-screen h-screen text-md box-border fade-animation">
       <Layout>
+        {/* <div></div> */}
         <div style={{ background: "#87BCDE"}} className="mini-navbar rounded-2xl" id="about" onClick={()=> setCurrent("about")}>
 
             {current === "about" ?
@@ -72,23 +70,22 @@ export default function Home() {
         >
           {current === "" ? 
             <div className="name-fade-animation">
-              <h1 className="">
+              <h1>
                 Monte Yoon
               </h1>
               <h2>
-                Software Engineer.
+                Software Developer.
               </h2>
             </div> :
             <div 
-              className="whitespace-nowrap relative h-full" 
-
+              className="h-full" 
             >
-              <h1 className="name-fade-animation -rotate-90 absolute left-1 top-20">
+              <h1 className="name-fade-animation fixed lg:-rotate-90 lg:-right-20 lg:top-20 z-20" >
                 Monte Yoon
               </h1>
               <div id="exitIcon" className={showBack ? `showExit exitIcon` : `exitIcon`}>
                 {
-                  <div className={` absolute bottom-0 right-0`} >
+                  <div className={`absolute bottom-0 right-0`} >
                     <BackArrow width={44}/>
                   </div> 
                 }
@@ -98,7 +95,7 @@ export default function Home() {
           }
       </div>
       </Layout>
-
+      <MyLinks current={current}/>
     </div>
   );
 }

@@ -71,15 +71,6 @@ button:hover {
   }
 }
 
-@keyframes fade-outin {
-  0% {
-    opacity: 1
-  } 
-  100% {
-    opacity: 0
-  }
-}
-
 @keyframes name-fade-inout {
   0% {
     opacity: 0;
@@ -100,13 +91,8 @@ button:hover {
 }
 
 .name-fade-animation {
-  animation-delay: 0.7s;
+  animation-delay: 700ms;
   animation: name-fade-inout 2s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-.fade-out {
-  animation: fade-outin 1.5s cubic-bezier(0.76, 0, 0.24, 1);
-  /* animation-fill-mode: forwards;  */
 }
 
 .opacity {
@@ -114,7 +100,7 @@ button:hover {
 }
 
 .exitIcon {
-  transition: 1s opacity ease-in-out;
+  transition: 400ms opacity ease-in-out;
   opacity: 0;
 }
 
