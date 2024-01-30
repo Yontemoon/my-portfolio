@@ -12,6 +12,8 @@ import ContactIcon from "./icons/ContactIcon";
 import ProjectIcon from "./icons/ProjectIcon";
 import BackArrow from "./icons/back-arrow";
 import MyLinks from "./components/MyLinks";
+import MaxHomePage from "./components/MaxHomePage";
+import MiniHomePage from "./components/MiniHomePage";
 
 export default function Home() {
 
@@ -69,29 +71,8 @@ export default function Home() {
           onMouseOut={() => setShowBack(false)}
         >
           {current === "" ? 
-            <div className="name-fade-animation">
-              <h1>
-                Monte Yoon
-              </h1>
-              <h2>
-                Software Developer.
-              </h2>
-            </div> :
-            <div 
-              className="relative m-0"
-            >
-              <h1 className="name-fade-animation fixed lg:-rotate-90 lg:-right-20 lg:top-20 z-30 lg:mr-1 lg:mt-3 text-nowrap">
-                Monte Yoon
-              </h1>
-              <div id="exitIcon" className={showBack ? `showExit exitIcon` : `exitIcon`}>
-                {
-                  <div className={`fixed bottom-0 right-0 m-2`} >
-                    <BackArrow width={44}/>
-                  </div> 
-                }
-              </div>
-
-            </div>
+            <MaxHomePage/> :
+            <MiniHomePage setShowBack={setShowBack} showBack={showBack}/>
           }
       </div>
       </Layout>
