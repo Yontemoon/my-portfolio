@@ -8,10 +8,10 @@ const MyLinks = ({current}: {current: string}) => {
             {
                 current === "" ? 
                 <span className="fixed flex mb-2 mr-5 bottom-0 right-0 z-10">
-                    <a href="https://letterboxd.com/Holycrabs/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
+                    <a href="https://www.linkedin.com/in/monte-yoon-a1108114a/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
                         <Linkedin/>
                     </a>
-                    <a href="https://letterboxd.com/Holycrabs/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
+                    <a href="https://github.com/Yontemoon" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
                         <Github/>
                     </a>
                     <a href="https://letterboxd.com/Holycrabs/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
@@ -20,10 +20,10 @@ const MyLinks = ({current}: {current: string}) => {
                 </span> 
                 :
                 <div className="name-fade-animation fixed lg:right-0 lg:bottom-32 lg:mr-1 bottom-0 right-32 z-20 flex flex-row lg:flex-col">
-                    <a href="https://letterboxd.com/Holycrabs/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
+                    <a href="https://www.linkedin.com/in/monte-yoon-a1108114a/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
                         <Linkedin/>
                     </a>
-                    <a href="https://letterboxd.com/Holycrabs/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
+                    <a href="https://github.com/Yontemoon" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
                         <Github/>
                     </a>
                     <a href="https://letterboxd.com/Holycrabs/" rel="noopener noreferrer" target="_blank" className="name-fade-animation">
