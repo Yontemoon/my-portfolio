@@ -1,5 +1,5 @@
 import { Inputs } from "../lib/definitions";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com"
 import {useForm, SubmitHandler} from "react-hook-form"
 import ContactIcon from "../icons/ContactIcon";
@@ -21,6 +21,11 @@ const MaxContactPage = () => {
       } = useForm<Inputs>()
 
       const form = useRef<HTMLFormElement | null>(null)
+      const focusInput = useRef<HTMLInputElement>(null)
+
+      useEffect(() => {
+        focusInput?.current?.focus()
+      }, [])
 
     
     const onSubmit: SubmitHandler<Inputs> =  (data) => {
@@ -75,6 +80,7 @@ const MaxContactPage = () => {
                         )}
                         type="text"
                         className="rounded p-2"
+                        ref={focusInput}
                     />
                 </div>
                 <div className="flex flex-col mb-2">
