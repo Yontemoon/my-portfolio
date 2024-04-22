@@ -21,7 +21,7 @@ const ProjectLink = ({title, project_description, descriptors, image, link_to_ca
 
     return (
         <main 
-            className='flex w-3/4 justify-center p-4  m-5 cursor-pointer rounded hover:bg-opacity-30 hover:bg-gray-500 hover:shadow-2xl duration-700' 
+            className='flex w-3/4 justify-between p-4  m-5 cursor-pointer rounded hover:bg-opacity-30 hover:bg-gray-500 hover:shadow-2xl duration-700' 
             onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
             <div className='flex flex-col mr-2'>
                 <div className='flex text-center items-center mb-2'>
@@ -41,13 +41,13 @@ const ProjectLink = ({title, project_description, descriptors, image, link_to_ca
                     {project_description}
                 </p>
                 <div className='gap-2 flex'>
-                    <Link href={link_to_case} className='border rounded p-1'>View Code</Link>
-                    <Link href={link_to_site} className='border rounded p-1'>Link to Site</Link>
+                    <a href={link_to_case} className='border rounded p-1' rel="noreferrer" target="_blank" >View Code</a>
+                    <a href={link_to_site} className='border rounded p-1' rel="noreferrer" target="_blank" >Link to Site</a>
                 </div>
             </div>
-            <Link href="/test" className='w-96 h-40 overflow-hidden rounded'>
+            <a href={link_to_site} rel="noreferrer" target="_blank" className='w-96 h-40 overflow-hidden rounded'>
                 <Image className='w-full h-full object-cover duration-75 hover:scale-110 hover:ease-in-out z-10' src={image} alt="image"/>
-            </Link>
+            </a>
         </main>
     );
 };

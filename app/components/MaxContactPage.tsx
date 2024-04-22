@@ -1,9 +1,11 @@
+"use client"
+
 import { Inputs } from "../lib/definitions";
 import { useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com"
 import {useForm, SubmitHandler} from "react-hook-form"
 import ContactIcon from "../icons/ContactIcon";
-import ProjectIcon from "../icons/ProjectIcon";
+
 
 const MaxContactPage = () => {
 
@@ -18,14 +20,14 @@ const MaxContactPage = () => {
         handleSubmit,
         reset,
         formState: { errors },
-      } = useForm<Inputs>()
+        setFocus
+      } = useForm<Inputs>();
 
       const form = useRef<HTMLFormElement | null>(null)
-      const focusInput = useRef<HTMLInputElement>(null)
 
       useEffect(() => {
-        focusInput?.current?.focus()
-      }, [])
+        setFocus("from_name")
+      }, [setFocus])
 
     
     const onSubmit: SubmitHandler<Inputs> =  (data) => {
@@ -63,6 +65,7 @@ const MaxContactPage = () => {
             
             {/* <p>Would love to get in contact and possibly connect!</p> */}
             <form onSubmit={handleSubmit(onSubmit)} ref={form} className="w-1/2 justify-center">
+
                 <div className="flex flex-col mb-2 items">
                     <div className="flex gap-x-2">
                         <label className="mb-1 text-xl">Name:</label>
@@ -80,9 +83,9 @@ const MaxContactPage = () => {
                         )}
                         type="text"
                         className="rounded p-2"
-                        ref={focusInput}
                     />
                 </div>
+
                 <div className="flex flex-col mb-2">
                     <div className="flex gap-x-2">
                         <label className="mb-1 text-xl">Email:</label>
@@ -104,6 +107,7 @@ const MaxContactPage = () => {
                         className="rounded p-2"
                     />
                 </div>
+
                 <div>
                     <div className="flex gap-x-2 ">
                         <label className="mb-2 text-xl">Message:</label>

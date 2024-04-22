@@ -1,6 +1,7 @@
 import ProjectLink from "./ProjectLink";
 import templateImg from "../images/template-image.jpg"
 import ProjectIcon from "../icons/ProjectIcon";
+import MovieNextjs from "../images/movie-nextjs.png"
 
 const MaxProjectsPage = () => {
 
@@ -15,12 +16,12 @@ const MaxProjectsPage = () => {
 
             <div className="flex flex-col items-center p-4">
                 <ProjectLink 
-                    title={"Movie List"}
-                    project_description="Application to search for movies to add onto your watchlist or favorite it if you've already watched it."
-                    image={templateImg}
-                    descriptors={["React", "Web Design", "Full Stack"]}
-                    link_to_case="/case-movie-app"
-                    link_to_site="youtube.com"
+                    title="Monte Movies - Movie Tracker"
+                    project_description="Application to search for movies. Add to movies to your own watchlist, rate movies, and add them to your favorites. Used Third Party API (TMDb)."
+                    image={MovieNextjs}
+                    descriptors={["Next.js", "Authentication", "Frontend", "API"]}
+                    link_to_case="https://github.com/Yontemoon/movie-nextjs"
+                    link_to_site="https://movie-nextjs-chi.vercel.app/"
                 />
                 <ProjectLink 
                     title={"Movie List"}

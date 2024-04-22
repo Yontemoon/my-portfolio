@@ -24,6 +24,7 @@ export default function Home() {
   const pathName = usePathname().substring(1)
 
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(()=> {
     // console.log("current", current)
     if (current !== pathName) {
