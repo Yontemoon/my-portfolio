@@ -49,7 +49,7 @@ const MaxContactPage = () => {
   };
 
   return (
-    <div className="fade-animation w-full p-4 flex flex-col items-center text-white overflow-y-auto">
+    <div className="fade-animation w-full p-4 flex flex-col items-center text-white overflow-y-auto scroll-style">
       <div className="m-5">
         <ContactIcon color="white" width={40} />
       </div>

@@ -57,7 +57,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             variants={columnVariants}
             className={clsx(
               i === 3 ? "parent-home" : "parent-div",
-              "min-w-28 min-h-20 rounded-xl"
+              "lg:min-w-28 min-h-20 rounded-xl"
             )}
             animate={
               i === 3 && isActive

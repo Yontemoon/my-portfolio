@@ -2,7 +2,7 @@ import AboutIcon from "../icons/AboutIcon";
 
 const MaxAboutPage = () => {
   return (
-    <main className="p-4 fade-animation w-full flex justify-center overflow-y-auto">
+    <main className="p-4 fade-animation w-full flex justify-center overflow-y-auto scroll-style">
       <div className="max-w-screen-sm m-4">
         <div className="flex justify-center m-5">
           <AboutIcon color={"black"} width={40} />
