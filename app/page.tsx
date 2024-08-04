@@ -1,6 +1,7 @@
-"use client"
+/* eslint-disable react-hooks/exhaustive-deps */
+"use client";
 
-import Layout from "./components/layout/Layout";
+import Layout from "./components/animation/LayoutShift";
 import { useEffect, useState } from "react";
 import MaxAboutPage from "./components/MaxAboutPage";
 import MaxProjectsPage from "./components/MaxProjectsPage";
@@ -16,68 +17,77 @@ import MaxHomePage from "./components/MaxHomePage";
 import MiniHomePage from "./components/MiniHomePage";
 
 export default function Home() {
+  const [current, setCurrent] = useState(usePathname().substring(1));
+  const [showBack, setShowBack] = useState(false);
+  const pathName = usePathname().substring(1);
 
-
-  //State is probably not the best here.... maybe ref? 
-  const [current, setCurrent] = useState(usePathname().substring(1))
-  const [showBack, setShowBack] = useState(false)
-  const pathName = usePathname().substring(1)
-
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(()=> {
-    // console.log("current", current)
+  useEffect(() => {
     if (current !== pathName) {
-      setCurrent(pathName)
+      setCurrent(pathName);
     }
-  })
+  });
 
   return (
     <div className="flex w-screen h-screen text-md box-border fade-animation">
       <Layout>
-        {/* <div></div> */}
-        <div style={{ background: "#87BCDE"}} className="mini-navbar rounded-2xl" id="about" onClick={()=> setCurrent("about")}>
-
-            {current === "about" ?
-              <MaxAboutPage/> :
-              <MiniPage header="About Me">
-                <AboutIcon color="white" width={35}/>
-              </MiniPage>
-            }
-
+        <div
+          style={{ background: "#87BCDE" }}
+          className="mini-navbar rounded-2xl"
+          id="about"
+          onClick={() => setCurrent("about")}
+        >
+          {current === "about" ? (
+            <MaxAboutPage />
+          ) : (
+            <MiniPage header="About Me">
+              <AboutIcon color="white" width={35} />
+            </MiniPage>
+          )}
         </div>
-        <div style={{ background: "#4E4D5C"}} id="projects" className="mini-navbar rounded-2xl" onClick={()=> setCurrent("projects")}>
-
-          {current === "projects" ? 
-            <MaxProjectsPage/> :
+        <div
+          style={{ background: "#4E4D5C" }}
+          id="projects"
+          className="mini-navbar rounded-2xl"
+          onClick={() => setCurrent("projects")}
+        >
+          {current === "projects" ? (
+            <MaxProjectsPage />
+          ) : (
             <MiniPage header="My Projects">
-              <ProjectIcon color="white" width={35}/>
+              <ProjectIcon color="white" width={35} />
             </MiniPage>
-          }
+          )}
         </div>
 
-        <div style={{ background: "#805E73"}} className="mini-navbar rounded-2xl" id="contact" onClick={()=> setCurrent("contact")}>
-          {current === "contact" ? 
-            <MaxContactPage/> :
+        <div
+          style={{ background: "#805E73" }}
+          className="mini-navbar rounded-2xl"
+          id="contact"
+          onClick={() => setCurrent("contact")}
+        >
+          {current === "contact" ? (
+            <MaxContactPage />
+          ) : (
             <MiniPage header="Contact Me">
-              <ContactIcon color="white" width={35}/>
+              <ContactIcon color="white" width={35} />
             </MiniPage>
-          }
+          )}
         </div>
-        <div 
-          id="home" 
-          style={{width:"100%"}} 
-          onClick={()=> setCurrent("")} 
-          onMouseOver={() => setShowBack(true)} 
+        <div
+          id="home"
+          style={{ width: "100%" }}
+          onClick={() => setCurrent("")}
+          onMouseOver={() => setShowBack(true)}
           onMouseOut={() => setShowBack(false)}
         >
-          {current === "" ? 
-            <MaxHomePage/> :
-            <MiniHomePage setShowBack={setShowBack} showBack={showBack}/>
-          }
-      </div>
+          {current === "" ? (
+            <MaxHomePage />
+          ) : (
+            <MiniHomePage setShowBack={setShowBack} showBack={showBack} />
+          )}
+        </div>
       </Layout>
-      <MyLinks current={current}/>
+      <MyLinks current={current} />
     </div>
   );
 }
