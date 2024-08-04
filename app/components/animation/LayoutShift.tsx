@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 import { routes } from "../../lib/routes";
+import clsx from "clsx";
 import "./layoutShift.css";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [active, setActive] = useState<number | null>(null);
-  const [showChildren, setShowChildren] = useState<boolean[]>([]);
 
   const router = useRouter();
   const pathUrl = usePathname();
@@ -46,7 +46,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-screen lg:flex-row">
+    <div className="flex flex-col h-screen w-screen lg:flex-row lg:gap-4 lg:py-3 gap-2 px-2 pt-2">
       {React.Children.map(children, (child, i) => {
         const isActive = i === active;
         const cursorStyle = isActive ? "auto" : "pointer";
@@ -55,7 +55,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <motion.div
             key={i}
             variants={columnVariants}
-            className={i === 3 ? "parent-home" : "parent-div"}
+            className={clsx(
+              i === 3 ? "parent-home" : "parent-div",
+              "min-w-28 min-h-20 rounded-xl"
+            )}
             animate={
               i === 3 && isActive
                 ? "initial"
@@ -64,25 +67,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 : "initial"
             }
             transition={{ duration: 0.5, delay: 0.2 }}
-            onAnimationComplete={() =>
-              setShowChildren((prev) => {
-                const newShowChildren = [...prev];
-                newShowChildren[i] = true;
-                return newShowChildren;
-              })
-            }
             onClick={() => handleRoute(i, routes[i])}
             style={{
               overflow: "hidden",
               cursor: cursorStyle,
               display: "flex",
-              margin: "1em",
               flex: 1,
               position: "relative",
-              borderRadius: "25px",
             }}
           >
-            {showChildren[i] && child}
+            {child}
           </motion.div>
         );
       })}

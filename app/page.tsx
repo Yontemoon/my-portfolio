@@ -28,11 +28,11 @@ export default function Home() {
   });
 
   return (
-    <div className="flex w-screen h-screen text-md box-border fade-animation">
+    <>
       <Layout>
         <div
           style={{ background: "#87BCDE" }}
-          className="mini-navbar rounded-2xl"
+          className="mini-navbar"
           id="about"
           onClick={() => setCurrent("about")}
         >
@@ -47,7 +47,7 @@ export default function Home() {
         <div
           style={{ background: "#4E4D5C" }}
           id="projects"
-          className="mini-navbar rounded-2xl"
+          className="mini-navbar"
           onClick={() => setCurrent("projects")}
         >
           {current === "projects" ? (
@@ -61,7 +61,7 @@ export default function Home() {
 
         <div
           style={{ background: "#805E73" }}
-          className="mini-navbar rounded-2xl"
+          className="mini-navbar"
           id="contact"
           onClick={() => setCurrent("contact")}
         >
@@ -88,6 +88,6 @@ export default function Home() {
         </div>
       </Layout>
       <MyLinks current={current} />
-    </div>
+    </>
   );
 }

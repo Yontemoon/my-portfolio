@@ -49,7 +49,7 @@ const MaxContactPage = () => {
   };
 
   return (
-    <div className="fade-animation w-full m-4 flex flex-col items-center text-white overflow-y-auto">
+    <div className="fade-animation w-full p-4 flex flex-col items-center text-white overflow-y-auto">
       <div className="m-5">
         <ContactIcon color="white" width={40} />
       </div>
@@ -68,7 +68,7 @@ const MaxContactPage = () => {
       <form
         onSubmit={handleSubmit(onSubmit)}
         ref={form}
-        className="w-1/2 justify-center"
+        className="w-full px-10 md:w-1/2 justify-center"
       >
         <div className="flex flex-col mb-2 items">
           <div className="flex gap-x-2">

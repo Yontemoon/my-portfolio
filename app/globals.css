@@ -6,6 +6,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  /* min-width: 120px;
+  min-height: 120px; */
 }
 
 h1 {
@@ -20,31 +22,60 @@ h2 {
 h3 {
   font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+}
 
 a {
   font-weight: bold;
   transition-duration: 300ms;
 }
 a:hover {
-  color: #9C6615;
-
+  color: #9c6615;
 }
 
 #home {
   margin: 1rem;
 }
 
-textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+textarea:focus,
+input:focus,
+input[type]:focus,
+.uneditable-input:focus {
   border-color: rgba(182, 8, 8, 0.8);
-  outline:  solid 1px rgb(165, 165, 165);
+  outline: solid 1px rgb(165, 165, 165);
 }
 
-textarea, input {
+textarea,
+input {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   --tw-bg-opacity: 0.4;
-
 }
 
 button {
@@ -61,13 +92,12 @@ button:hover {
   color: white;
 }
 
-
 @keyframes fade-inout {
   0% {
-    opacity: 0
-  } 
+    opacity: 0;
+  }
   100% {
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -81,9 +111,7 @@ button:hover {
   100% {
     opacity: 1;
   }
-
 }
-
 
 .fade-animation {
   animation-delay: 500ms;
@@ -96,7 +124,7 @@ button:hover {
 }
 
 .opacity {
-  opacity: 0
+  opacity: 0;
 }
 
 .exitIcon {
