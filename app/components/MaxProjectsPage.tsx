@@ -5,7 +5,7 @@ import MovieNextjs from "../images/movie-nextjs.jpg";
 
 const MaxProjectsPage = () => {
   return (
-    <main className="fade-animation flex flex-col items-center text-white p-4 overflow-y-auto scroll-style">
+    <main className="fade-animation flex flex-col items-center text-white p-4 overflow-y-auto scroll-style delayed-fade-animation">
       <div className="m-5">
         <ProjectIcon color="white" width={40} />
       </div>

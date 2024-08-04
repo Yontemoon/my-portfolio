@@ -1,17 +1,20 @@
+"use client";
+
 import LetterBoxd from "../icons/LetterBoxedLogo";
 import Linkedin from "../icons/LinkedinIcon";
 import Github from "../icons/GithubIcon";
+// import usepath
 
 const MyLinks = ({ current }: { current: string }) => {
   return (
-    <div className="name-fade-animation">
+    <div className="delayed-fade-animation">
       {current === "" ? (
-        <span className="fixed flex mb-2 mr-5 bottom-0 right-0 z-10">
+        <span className="fixed flex mb-2 mr-5 bottom-0 right-0 z-10 delayed-fade-animation">
           <a
             href="https://www.linkedin.com/in/monte-yoon-a1108114a/"
             rel="noopener noreferrer"
             target="_blank"
-            className="name-fade-animation"
+            // className="delayed-fade-animation"
           >
             <Linkedin />
           </a>
@@ -19,7 +22,7 @@ const MyLinks = ({ current }: { current: string }) => {
             href="https://github.com/Yontemoon"
             rel="noopener noreferrer"
             target="_blank"
-            className="name-fade-animation"
+            // className="name-fade-animation"
           >
             <Github />
           </a>
@@ -27,18 +30,18 @@ const MyLinks = ({ current }: { current: string }) => {
             href="https://letterboxd.com/Holycrabs/"
             rel="noopener noreferrer"
             target="_blank"
-            className="name-fade-animation"
+            // className="name-fade-animation"
           >
             <LetterBoxd />
           </a>
         </span>
       ) : (
-        <div className="name-fade-animation fixed lg:right-0 lg:bottom-32 lg:mr-1 bottom-0 right-32 z-20 flex flex-row lg:flex-col">
+        <div className="delayed-fade-animation fixed lg:right-0 lg:bottom-32 lg:mr-1 bottom-0 right-32 z-20 flex flex-row lg:flex-col">
           <a
             href="https://www.linkedin.com/in/monte-yoon-a1108114a/"
             rel="noopener noreferrer"
             target="_blank"
-            className="name-fade-animation"
+            // className="name-fade-animation"
           >
             <Linkedin />
           </a>
@@ -46,7 +49,7 @@ const MyLinks = ({ current }: { current: string }) => {
             href="https://github.com/Yontemoon"
             rel="noopener noreferrer"
             target="_blank"
-            className="name-fade-animation"
+            // className="name-fade-animation"
           >
             <Github />
           </a>
@@ -54,7 +57,7 @@ const MyLinks = ({ current }: { current: string }) => {
             href="https://letterboxd.com/Holycrabs/"
             rel="noopener noreferrer"
             target="_blank"
-            className="name-fade-animation"
+            // className="name-fade-animation"
           >
             <LetterBoxd />
           </a>

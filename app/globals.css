@@ -118,9 +118,9 @@ button:hover {
   animation: fade-inout 1.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.name-fade-animation {
-  animation-delay: 700ms;
-  animation: name-fade-inout 2s cubic-bezier(0.76, 0, 0.24, 1);
+.delayed-fade-animation {
+  animation-delay: 500ms;
+  animation: name-fade-inout 1.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .opacity {

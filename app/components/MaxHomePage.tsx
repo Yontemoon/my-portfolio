@@ -6,7 +6,7 @@ const MaxHomePage = () => {
     <div
       className={clsx(
         play.className,
-        "name-fade-animation fixed flex flex-col z-10 mb-2 mr-5"
+        "delayed-fade-animation fixed flex flex-col z-10 mb-2 mr-5"
       )}
     >
       <h1>Monte Yoon</h1>
