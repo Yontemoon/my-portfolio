@@ -11,8 +11,6 @@ import { usePathname } from "next/navigation";
 import AboutIcon from "./icons/AboutIcon";
 import ContactIcon from "./icons/ContactIcon";
 import ProjectIcon from "./icons/ProjectIcon";
-import BackArrow from "./icons/back-arrow";
-import MyLinks from "./components/MyLinks";
 import MaxHomePage from "./components/MaxHomePage";
 import MiniHomePage from "./components/MiniHomePage";
 
