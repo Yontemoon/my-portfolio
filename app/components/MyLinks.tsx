@@ -4,7 +4,7 @@ import Github from "../icons/GithubIcon";
 
 const MyLinks = () => {
   return (
-    <div className="delayed-fade-animation flex lg:flex-col flex-row align-middle">
+    <div className="delayed-fade-animation flex lg:flex-col flex-row content-center m-auto">
       <a
         href="https://www.linkedin.com/in/monte-yoon-a1108114a/"
         rel="noopener noreferrer"

@@ -79,7 +79,7 @@ export default function Home() {
           onMouseOut={() => setShowBack(false)}
         >
           {current === "" ? (
-            <MaxHomePage />
+            <MaxHomePage setShowBack={setShowBack} />
           ) : (
             <MiniHomePage setShowBack={setShowBack} showBack={showBack} />
           )}
