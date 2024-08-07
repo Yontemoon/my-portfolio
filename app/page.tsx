@@ -75,7 +75,7 @@ export default function Home() {
         </div>
         <div
           id="home"
-          style={{ width: "100%" }}
+          className="w-full"
           onClick={() => setCurrent("")}
           onMouseOver={() => setShowBack(true)}
           onMouseOut={() => setShowBack(false)}
@@ -87,7 +87,6 @@ export default function Home() {
           )}
         </div>
       </Layout>
-      <MyLinks current={current} />
     </>
   );
 }
