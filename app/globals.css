@@ -2,16 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #1e293b;
+@layer base {
+  :root {
+    --color-text: 235 230 230;
+    --color-about: 128 94 115;
+    --color-projects: 78 77 92;
+    --color-contact: 45 70 84;
+  }
+
+  :root[data-theme="fiesta"] {
+    --color-text: 26 25 25;
+    --color-about: 76 205 196;
+    --color-projects: 255 230 107;
+    --color-contact: 255 107 107;
+  }
 }
 
 .mini-navbar {
   width: 100%;
   display: flex;
   justify-content: center;
-  /* min-width: 120px;
-  min-height: 120px; */
 }
 
 h1 {

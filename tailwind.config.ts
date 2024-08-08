@@ -8,7 +8,14 @@ const config: Config = {
     "./ui/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary_text: "rgb(var(--color-text) / <alpha-value>)",
+        about: "rgb(var(--color-about) / <alpha-value>)",
+        projects: "rgb(var(--color-projects) / <alpha-value>)",
+        contact: "rgb(var(--color-contact) / <alpha-value>)",
+      },
+    },
   },
   plugins: [],
 };

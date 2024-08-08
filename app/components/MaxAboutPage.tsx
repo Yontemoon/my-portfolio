@@ -1,4 +1,5 @@
 import AboutIcon from "../icons/AboutIcon";
+import Javascript from "../icons/tools/Javascript";
 
 const MaxAboutPage = () => {
   return (
@@ -43,6 +44,11 @@ const MaxAboutPage = () => {
           </a>
           , practicing jiu-jitsu, and climbing bouldering gyms.
         </p>
+        <br />
+        {/* <h2>Front-end Tools</h2>
+        <div className="grid grid-cols-6 mt-5">
+          <Javascript />
+        </div> */}
       </div>
     </main>
   );

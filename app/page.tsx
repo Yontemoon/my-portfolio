@@ -13,12 +13,12 @@ import ContactIcon from "./icons/ContactIcon";
 import ProjectIcon from "./icons/ProjectIcon";
 import MaxHomePage from "./components/MaxHomePage";
 import MiniHomePage from "./components/MiniHomePage";
+import ThemeSelector from "./components/ThemeSelector";
 
 export default function Home() {
   const [current, setCurrent] = useState(usePathname().substring(1));
   const [showBack, setShowBack] = useState(false);
   const pathName = usePathname().substring(1);
-
   useEffect(() => {
     if (current !== pathName) {
       setCurrent(pathName);
@@ -27,10 +27,10 @@ export default function Home() {
 
   return (
     <>
+      <ThemeSelector />
       <Layout>
         <div
-          style={{ background: "#87BCDE" }}
-          className="mini-navbar"
+          className="mini-navbar bg-about"
           id="about"
           onClick={() => setCurrent("about")}
         >
@@ -38,28 +38,26 @@ export default function Home() {
             <MaxAboutPage />
           ) : (
             <MiniPage header="About Me">
-              <AboutIcon color="white" width={35} />
+              <AboutIcon width={35} />
             </MiniPage>
           )}
         </div>
         <div
-          style={{ background: "#4E4D5C" }}
           id="projects"
-          className="mini-navbar"
+          className="mini-navbar bg-projects"
           onClick={() => setCurrent("projects")}
         >
           {current === "projects" ? (
             <MaxProjectsPage />
           ) : (
             <MiniPage header="My Projects">
-              <ProjectIcon color="white" width={35} />
+              <ProjectIcon width={35} />
             </MiniPage>
           )}
         </div>
 
         <div
-          style={{ background: "#805E73" }}
-          className="mini-navbar"
+          className="mini-navbar bg-contact"
           id="contact"
           onClick={() => setCurrent("contact")}
         >
@@ -67,13 +65,13 @@ export default function Home() {
             <MaxContactPage />
           ) : (
             <MiniPage header="Contact Me">
-              <ContactIcon color="white" width={35} />
+              <ContactIcon width={35} />
             </MiniPage>
           )}
         </div>
         <div
           id="home"
-          className="w-full"
+          className="w-full text-black"
           onClick={() => setCurrent("")}
           onMouseOver={() => setShowBack(true)}
           onMouseOut={() => setShowBack(false)}

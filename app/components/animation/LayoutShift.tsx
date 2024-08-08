@@ -8,12 +8,14 @@ import { useState } from "react";
 import { routes } from "../../lib/routes";
 import clsx from "clsx";
 import "./layoutShift.css";
+import { useTheme } from "@/app/context/ThemeContext";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [active, setActive] = useState<number | null>(null);
 
   const router = useRouter();
-  const pathUrl = usePathname();
+  const pathname = usePathname();
+  const { theme } = useTheme();
 
   const columnVariants = {
     initial: { flex: 1 },
@@ -22,7 +24,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const currentIndex = routes.findIndex(
-      (route) => route === pathUrl.substring(1)
+      (route) => route === pathname.substring(1)
     );
     if (active !== currentIndex) {
       setActive(currentIndex);
@@ -32,7 +34,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     if (active === null) return;
     const currentIndex = routes.findIndex(
-      (route) => route === pathUrl.substring(1)
+      (route) => route === pathname.substring(1)
     );
 
     if (active !== currentIndex) {
@@ -46,7 +48,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-screen lg:flex-row lg:gap-4 lg:py-3 gap-2 px-2 pt-2">
+    <div
+      className={`flex flex-col h-screen w-screen lg:flex-row lg:gap-4 lg:py-3 gap-2 px-2 pt-2 theme-${theme}`}
+    >
       {React.Children.map(children, (child, i) => {
         const isActive = i === active;
         const cursorStyle = isActive ? "auto" : "pointer";
