@@ -16,6 +16,55 @@
     --color-projects: 255 230 107;
     --color-contact: 255 107 107;
   }
+
+  :root[data-theme="nostalgia"] {
+    --color-text: 26 25 25;
+    --color-about: 199 235 229;
+    --color-projects: 167 232 189;
+    --color-contact: 252 188 184;
+  }
+
+  :root[data-theme="ikea"] {
+    --color-text: 26 25 25;
+    --color-about: 84 222 253;
+    --color-projects: 139 215 210;
+    --color-contact: 0 189 157;
+  }
+
+  :root[data-theme="mint-chocolate"] {
+    --color-text: 26 25 25;
+    --color-about: 194 239 179;
+    --color-projects: 151 171 177;
+    --color-contact: 116 111 114;
+  }
+
+  :root[data-theme="cambridge"] {
+    --color-text: 26 25 25;
+    --color-about: 148 168 154;
+    --color-projects: 199 172 146;
+    --color-contact: 164 74 63;
+  }
+
+  :root[data-theme="ocean"] {
+    --color-text: 235 230 230;
+    --color-about: 31 39 27;
+    --color-projects: 11 79 108;
+    --color-contact: 20 92 158;
+  }
+
+  :root[data-theme="moody"] {
+    --color-text: 235 230 230;
+    --color-about: 0 0 0;
+    --color-projects: 61 38 69;
+    --color-contact: 131 33 97;
+  }
+
+  :root[data-theme="charlie-brown"] {
+    --color-text: 235 230 230;
+    --color-about: 0 38 66;
+    --color-projects: 132 0 50;
+    --color-contact: 229 149 0;
+  }
 }
 
 .mini-navbar {

@@ -1,14 +1,28 @@
 import React from "react";
 import { useTheme } from "../context/ThemeContext";
-const themes = ["default", "fiesta"];
+const themes = [
+  "default",
+  "fiesta",
+  "nostalgia",
+  "ikea",
+  "mint-chocolate",
+  "cambridge",
+  "ocean",
+  "moody",
+  "charlie-brown",
+];
 
 const ThemeSelector = () => {
-  const { setTheme } = useTheme();
+  const { handleThemeChange } = useTheme();
 
   return (
-    <div className={`flex gap-4 `}>
+    <div className={` `}>
       {themes.map((t) => (
-        <div key={t} className="cursor-pointer" onClick={() => setTheme(t)}>
+        <div
+          key={t}
+          className="cursor-pointer text-black"
+          onClick={() => handleThemeChange(t)}
+        >
           {t}
         </div>
       ))}
