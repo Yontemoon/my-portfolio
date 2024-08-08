@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={clsx(
           fira_sans.className,
-          "flex w-screen h-screen text-md box-border antialiased text-primary_text transition-colors duration-1000"
+          "flex w-screen h-screen box-border text-primary_text"
         )}
       >
         <ThemeProvider>{children}</ThemeProvider>
