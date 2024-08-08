@@ -21,17 +21,11 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const localTheme = nextLocalStorage()?.getItem("local-theme");
-  console.log(localTheme);
   const [theme, setTheme] = useState(localTheme || "default");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
-  // useEffect(() => {
-  //   const localTheme = nextLocalStorage()?.getItem("local-theme") || "default";
-  //   setTheme(localTheme);
-  //   document.documentElement.setAttribute("data-theme", localTheme);
-  // }, []);
 
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme);
