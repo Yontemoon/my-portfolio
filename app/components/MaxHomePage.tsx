@@ -1,6 +1,7 @@
 import { play } from "../lib/fonts";
 import clsx from "clsx";
 import MyLinks from "./MyLinks";
+import ThemeButton from "./ThemeButton";
 
 const MaxHomePage = ({ ...props }) => {
   return (
@@ -15,7 +16,10 @@ const MaxHomePage = ({ ...props }) => {
         <h1>Monte Yoon</h1>
         <h2 className="mb-2">Software Developer.</h2>
       </div>
-      <div className={clsx("absolute bottom-0 right-0 ")}>
+      <div className="absolute lg:right-0 lg:bottom-64 bottom-11 right-0 cursor-pointer">
+        <ThemeButton className="lg:absolute lg:-rotate-90 lg:origin-right lg:right-4" />
+      </div>
+      <div className={clsx("absolute bottom-0 right-0 origin-left")}>
         <MyLinks />
       </div>
     </div>

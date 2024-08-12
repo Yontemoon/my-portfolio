@@ -65,10 +65,38 @@
     --color-projects: 132 0 50;
     --color-contact: 229 149 0;
   }
+
+  :root[data-theme="museum"] {
+    --color-text: 26 25 25;
+    --color-about: 230 57 70;
+    --color-projects: 241 250 238;
+    --color-contact: 168 218 220;
+  }
+
+  :root[data-theme="fall"] {
+    --color-text: 26 25 25;
+    --color-about: 221 110 66;
+    --color-projects: 232 218 178;
+    --color-contact: 79 109 122;
+  }
+
+  :root[data-theme="aquarium"] {
+    --color-text: 26 25 25;
+    --color-about: 35 240 199;
+    --color-projects: 239 118 122;
+    --color-contact: 125 122 188;
+  }
+
+  :root[data-theme="mirage"] {
+    --color-text: 26 25 25;
+    --color-about: 245 93 62;
+    --color-projects: 135 142 136;
+    --color-contact: 247 203 21;
+  }
 }
 
 * {
-  @apply transition-colors duration-300 ease-in-out text-primary_text;
+  @apply transition-colors duration-300 ease-in-out;
 }
 
 .mini-navbar {
@@ -191,3 +219,26 @@ button:hover {
   scrollbar-width: thin;
   scroll-margin: 10px;
 }
+
+/* .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+} */

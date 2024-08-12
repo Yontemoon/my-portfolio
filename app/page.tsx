@@ -13,7 +13,6 @@ import ContactIcon from "./icons/ContactIcon";
 import ProjectIcon from "./icons/ProjectIcon";
 import MaxHomePage from "./components/MaxHomePage";
 import MiniHomePage from "./components/MiniHomePage";
-import ThemeSelector from "./components/ThemeSelector";
 
 export default function Home() {
   const [current, setCurrent] = useState(usePathname().substring(1));
@@ -27,7 +26,6 @@ export default function Home() {
 
   return (
     <>
-      <ThemeSelector />
       <Layout>
         <div
           className="mini-navbar bg-about"
@@ -71,7 +69,7 @@ export default function Home() {
         </div>
         <div
           id="home"
-          className="w-full text-black"
+          className="w-full text-black z-10 relative"
           onClick={() => setCurrent("")}
           onMouseOver={() => setShowBack(true)}
           onMouseOut={() => setShowBack(false)}

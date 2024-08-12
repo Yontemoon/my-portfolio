@@ -10,18 +10,31 @@ const themes = [
   "ocean",
   "moody",
   "charlie-brown",
+  "museum",
+  "fall",
+  "aquarium",
+  "mirage",
 ];
 
-const ThemeSelector = () => {
+const ThemeSelector = ({
+  setShowThemes,
+}: {
+  setShowThemes: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const { handleThemeChange } = useTheme();
+
+  const toggleTheme = (t: string) => {
+    handleThemeChange(t);
+    setShowThemes(false);
+  };
 
   return (
     <div className={` `}>
       {themes.map((t) => (
         <div
           key={t}
-          className="cursor-pointer text-black"
-          onClick={() => handleThemeChange(t)}
+          className="cursor-pointer text-black z-50"
+          onClick={() => toggleTheme(t)}
         >
           {t}
         </div>
