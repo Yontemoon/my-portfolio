@@ -69,15 +69,20 @@ export default function Home() {
         </div>
         <div
           id="home"
-          className="w-full text-black z-10 relative"
-          onClick={() => setCurrent("")}
+          className="w-full text-black relative"
+          // onClick={() => setCurrent("")}
           onMouseOver={() => setShowBack(true)}
           onMouseOut={() => setShowBack(false)}
         >
           {current === "" ? (
-            <MaxHomePage setShowBack={setShowBack} />
+            <MaxHomePage />
           ) : (
-            <MiniHomePage setShowBack={setShowBack} showBack={showBack} />
+            <MiniHomePage
+              setShowBack={setShowBack}
+              showBack={showBack}
+              setCurrent={setCurrent}
+              current={current}
+            />
           )}
         </div>
       </Layout>

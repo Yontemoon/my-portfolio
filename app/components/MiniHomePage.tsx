@@ -8,23 +8,31 @@ import ThemeButton from "./ThemeButton";
 
 const MiniHomePage = ({
   setShowBack,
+  setCurrent,
   showBack,
+  current,
 }: {
   setShowBack: Dispatch<SetStateAction<boolean>>;
+  setCurrent: Dispatch<SetStateAction<string>>;
   showBack: boolean;
+  current: string;
 }) => {
   return (
     <div
       className={clsx(
-        "relative m-0 w-full h-full delayed-fade-animation",
+        "relative m-0 w-full h-full delayed-fade-animation z-10",
         play.className
       )}
+      onClick={() => setCurrent("/")}
     >
-      <h2 className=" absolute lg:-rotate-90 lg:-right-16 lg:top-20 z-30 lg:mr-5 lg:mt-3 text-nowrap overflow-hidden">
+      <h2 className=" absolute lg:-rotate-90 lg:-right-16 lg:top-20 z-30 lg:mr-5 lg:mt-3 text-nowrap overflow-hidden ">
         Monte Yoon
       </h2>
 
-      <div className="absolute lg:right-0 lg:bottom-80 bottom-11 right-0 cursor-pointer">
+      <div
+        className="absolute lg:right-0 lg:bottom-80 bottom-11 right-0 cursor-pointer z-50"
+        onClick={(e) => e.stopPropagation()}
+      >
         <ThemeButton className="lg:absolute lg:-rotate-90 lg:origin-right lg:right-4" />
       </div>
 

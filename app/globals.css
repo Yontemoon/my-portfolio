@@ -192,12 +192,12 @@ button:hover {
 }
 
 .fade-animation {
-  animation-delay: 400ms;
+  animation-delay: 200ms;
   animation: fade-inout 1.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .delayed-fade-animation {
-  animation-delay: 400ms;
+  animation-delay: 200ms;
   animation: name-fade-inout 1.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
@@ -206,7 +206,7 @@ button:hover {
 }
 
 .exitIcon {
-  transition: 400ms opacity ease-in-out;
+  transition: 200ms opacity ease-in-out;
   opacity: 0;
 }
 

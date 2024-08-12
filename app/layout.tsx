@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={clsx(
           fira_sans.className,
-          "flex w-screen h-screen box-border antialiased text-primary_text"
+          "relative flex w-screen h-screen box-border antialiased text-primary_text"
         )}
       >
         <ThemeProvider>{children}</ThemeProvider>

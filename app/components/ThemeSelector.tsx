@@ -3,6 +3,7 @@ import { useTheme } from "../context/ThemeContext";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { fira_sans } from "../ui/fonts";
+import ExternalLink from "./ExternalLink";
 
 const themes = [
   "default",
@@ -30,7 +31,6 @@ const ThemeSelector = ({
   const toggleTheme = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTheme = event.target.value;
     handleThemeChange(selectedTheme);
-    setShowThemes(false);
   };
 
   return (
@@ -73,6 +73,10 @@ const ThemeSelector = ({
             </option>
           ))}
         </select>
+        <p className="text-primary_text">
+          Credit for all the themes:&nbsp;
+          <ExternalLink href="https://coolors.co/">coolors.co</ExternalLink>
+        </p>
       </motion.div>
     </AnimatePresence>
   );
