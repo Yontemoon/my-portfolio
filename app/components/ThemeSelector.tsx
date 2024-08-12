@@ -36,7 +36,7 @@ const ThemeSelector = ({
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black bg-opacity-75 z-40 "
+        className="fixed inset-0 bg-black bg-opacity-75 z-40 cursor-default"
         onClick={() => setShowThemes(false)}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,7 +45,7 @@ const ThemeSelector = ({
       />
 
       <motion.div
-        className="fixed left-1/2 top-1/2 lg:w-1/4 w-4/5 lg:m-0 bg-about h-auto z-50 rounded-xl shadow-xl p-3"
+        className="fixed left-1/2 top-1/2 lg:w-1/4 w-4/5 lg:m-0 bg-about h-auto z-50 rounded-xl shadow-xl p-3 cursor-default"
         transition={{ ease: "easeOut", duration: 0.3, type: "spring" }}
         initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
         animate={{ scale: 1, opacity: 1, x: "-50%", y: "-50%" }}
@@ -57,7 +57,7 @@ const ThemeSelector = ({
           name="theme"
           id="color-them"
           defaultValue={theme}
-          className="my-2 w-full p-3 rounded-lg bg-projects text-primary_text shadow-lg"
+          className="my-2 w-full p-3 rounded-lg bg-projects text-primary_text shadow-lg cursor-pointer"
           onChange={toggleTheme}
         >
           {themes.map((t) => (

@@ -68,7 +68,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 ? "expanded"
                 : "initial"
             }
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
             onClick={() => handleRoute(i, routes[i])}
             style={{
               overflow: "hidden",
