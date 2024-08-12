@@ -64,7 +64,6 @@ const ThemeSelector = ({
             <option
               key={t}
               value={t}
-              onClick={() => toggleTheme(t)}
               className={clsx(
                 "checked:bg-contact  bg-projects text-primary_text ",
                 fira_sans.className
