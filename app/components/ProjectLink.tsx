@@ -16,7 +16,7 @@ const ProjectLink = ({
   link_to_site,
 }: PropTypes) => {
   return (
-    <div className="w-full xl:w-3/4 p-4 m-5 hover:bg-opacity-30 rounded-lg hover:bg-gray-400 hover:shadow-lg duration-500 grid lg:grid-cols-3 grid-cols-1 gap-5">
+    <div className="w-full xl:w-3/4 p-4 m-5 bg-opacity-40 rounded-lg bg-gray-400 shadow-md duration-500 grid lg:grid-cols-3 grid-cols-1 gap-5">
       <div className="flex flex-col gap-5 col-span-2">
         <h2 className="">{title}</h2>
         <p className="">{project_description}</p>
@@ -39,15 +39,10 @@ const ProjectLink = ({
           </a>
         </div>
       </div>
-      <div className="lg:block hidden">
-        <a
-          href={link_to_site}
-          rel="noreferrer"
-          target="_blank"
-          className="overflow-hidden rounded"
-        >
+      <div className="lg:block hidden rounded m-auto">
+        <a href={link_to_site} rel="noreferrer" target="_blank">
           <Image
-            className="flex items-center hover:ease-in-out z-10 rounded-lg box-border max-w-full max-h-full flex-shrink-0"
+            className="flex items-center hover:ease-in-out z-10 rounded-lg box-border max-w-full max-h-full flex-shrink-0 object-contain"
             src={image}
             alt={`${image}`}
             height={180}

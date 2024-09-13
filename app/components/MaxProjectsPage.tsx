@@ -13,11 +13,11 @@ const MaxProjectsPage = () => {
 
       <div className="flex flex-col items-center p-4">
         <ProjectLink
-          title="Simple World Simulator"
-          project_description="Application that shows a simulations of the births and deaths around the world."
+          title="Simple Pop Sim - Population Simulator"
+          project_description="Application that shows a simulation of the births and deaths around the world."
           image={SimplePop}
           link_to_case="https://github.com/Yontemoon/population-simulator"
-          link_to_site="https://population-simulator-dun.vercel.app/"
+          link_to_site="https://simplepopsim.com/"
         />
         <ProjectLink
           title="Monte Movies - Movie Tracker"
