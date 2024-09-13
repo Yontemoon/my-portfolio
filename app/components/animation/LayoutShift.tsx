@@ -54,7 +54,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         const cursorStyle = isActive ? "auto" : "pointer";
 
         return (
-          <motion.section
+          <motion.div
             key={i}
             variants={columnVariants}
             className={clsx(
@@ -79,7 +79,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             }}
           >
             {child}
-          </motion.section>
+          </motion.div>
         );
       })}
     </div>

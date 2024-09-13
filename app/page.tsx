@@ -16,7 +16,6 @@ import MiniHomePage from "./components/MiniHomePage";
 
 export default function Home() {
   const [current, setCurrent] = useState(usePathname().substring(1));
-  const [showBack, setShowBack] = useState(false);
   const pathName = usePathname().substring(1);
   useEffect(() => {
     if (current !== pathName) {
@@ -67,22 +66,11 @@ export default function Home() {
             </MiniPage>
           )}
         </div>
-        <div
-          id="home"
-          className="w-full text-black relative"
-          // onClick={() => setCurrent("")}
-          onMouseOver={() => setShowBack(true)}
-          onMouseOut={() => setShowBack(false)}
-        >
+        <div id="home" className="w-full text-black relative">
           {current === "" ? (
             <MaxHomePage />
           ) : (
-            <MiniHomePage
-              setShowBack={setShowBack}
-              showBack={showBack}
-              setCurrent={setCurrent}
-              current={current}
-            />
+            <MiniHomePage setCurrent={setCurrent} />
           )}
         </div>
       </Layout>

@@ -25,7 +25,7 @@ const ThemeButton = ({ className }: { className?: string }) => {
       >
         <motion.h2
           className={clsx(
-            " border border-transparent rounded-xl p-1 hover:bg-about hover:text-primary_text hover:shadow-sm z-50 relative ",
+            " border border-transparent rounded-xl p-2 hover:bg-about hover:text-primary_text hover:shadow-sm z-50 relative ",
             className
           )}
         >

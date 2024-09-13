@@ -1,16 +1,9 @@
-import React from "react";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import arrow from "../icons/arrow-up-right.svg";
-import bigArrow from "../icons/big-arrow-up-right.svg";
-import { useState } from "react";
-import ArrowUpRight from "../icons/ArrowUpRight";
 
 type PropTypes = {
   title: string;
   project_description: string;
   image: StaticImageData;
-  descriptors: string[];
   link_to_case: string;
   link_to_site: string;
 };
@@ -18,42 +11,19 @@ type PropTypes = {
 const ProjectLink = ({
   title,
   project_description,
-  descriptors,
   image,
   link_to_case,
   link_to_site,
 }: PropTypes) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <main
-      className="flex w-3/4 justify-between p-4  m-5 cursor-pointer rounded hover:bg-opacity-30 hover:bg-gray-500 hover:shadow-2xl duration-700"
-      onMouseOver={() => setIsHovered(true)}
-      onMouseOut={() => setIsHovered(false)}
-    >
-      <div className="flex flex-col mr-2">
-        <div className="flex text-center items-center mb-2">
-          <h2 className="mr-2">{title}</h2>
-          {/* <div> */}
-          {!isHovered ? (
-            <ArrowUpRight width="25" height="25" color="white" />
-          ) : (
-            <ArrowUpRight width="35" height="35" color="white" />
-          )}
-          {/* </div> */}
-        </div>
-        <div className="flex gap-2 mb-2">
-          {descriptors.map((descriptor) => (
-            <div key={descriptor} className="border rounded-lg p-1">
-              {descriptor}
-            </div>
-          ))}
-        </div>
-        <p className="mb-2">{project_description}</p>
-        <div className="gap-2 flex">
+    <div className="w-full xl:w-3/4 p-4 m-5 hover:bg-opacity-30 rounded-lg hover:bg-gray-400 hover:shadow-lg duration-500 grid lg:grid-cols-3 grid-cols-1 gap-5">
+      <div className="flex flex-col gap-5 col-span-2">
+        <h2 className="">{title}</h2>
+        <p className="">{project_description}</p>
+        <div className="gap-4 flex justify-center lg:justify-start">
           <a
             href={link_to_case}
-            className="border rounded p-1"
+            className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 "
             rel="noreferrer"
             target="_blank"
           >
@@ -61,7 +31,7 @@ const ProjectLink = ({
           </a>
           <a
             href={link_to_site}
-            className="border rounded p-1"
+            className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10"
             rel="noreferrer"
             target="_blank"
           >
@@ -69,19 +39,23 @@ const ProjectLink = ({
           </a>
         </div>
       </div>
-      <a
-        href={link_to_site}
-        rel="noreferrer"
-        target="_blank"
-        className="w-96 h-40 overflow-hidden rounded"
-      >
-        <Image
-          className="w-full h-full object-cover duration-75 hover:scale-110 hover:ease-in-out z-10"
-          src={image}
-          alt="image"
-        />
-      </a>
-    </main>
+      <div className="lg:block hidden">
+        <a
+          href={link_to_site}
+          rel="noreferrer"
+          target="_blank"
+          className="overflow-hidden rounded"
+        >
+          <Image
+            className="flex items-center hover:ease-in-out z-10 rounded-lg box-border max-w-full max-h-full flex-shrink-0"
+            src={image}
+            alt={`${image}`}
+            height={180}
+            width={300}
+          />
+        </a>
+      </div>
+    </div>
   );
 };
 

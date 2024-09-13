@@ -7,15 +7,9 @@ import clsx from "clsx";
 import ThemeButton from "./ThemeButton";
 
 const MiniHomePage = ({
-  setShowBack,
   setCurrent,
-  showBack,
-  current,
 }: {
-  setShowBack: Dispatch<SetStateAction<boolean>>;
   setCurrent: Dispatch<SetStateAction<string>>;
-  showBack: boolean;
-  current: string;
 }) => {
   return (
     <div
@@ -30,24 +24,14 @@ const MiniHomePage = ({
       </h2>
 
       <div
-        className="absolute lg:right-0 lg:bottom-80 bottom-11 right-0 cursor-pointer z-50"
+        className="absolute lg:right-0 lg:bottom-80 bottom-0 right-0 cursor-pointer z-50 my-1 "
         onClick={(e) => e.stopPropagation()}
       >
         <ThemeButton className="lg:absolute lg:-rotate-90 lg:origin-right lg:right-4" />
       </div>
 
-      <div className="absolute lg:bottom-14 lg:right-0 bottom-0 ">
+      <div className="absolute lg:bottom-0 lg:right-0 bottom-0 ">
         <MyLinks />
-      </div>
-      <div
-        id="exitIcon"
-        className={showBack ? `showExit exitIcon` : `exitIcon`}
-      >
-        {
-          <div className={`fixed bottom-0 right-0 m-2`}>
-            <BackArrow width={40} />
-          </div>
-        }
       </div>
     </div>
   );

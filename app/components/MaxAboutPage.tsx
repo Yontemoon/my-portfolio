@@ -1,5 +1,4 @@
 import AboutIcon from "../icons/AboutIcon";
-import Javascript from "../icons/tools/Javascript";
 
 const MaxAboutPage = () => {
   return (
@@ -10,11 +9,12 @@ const MaxAboutPage = () => {
         </div>
         <h1 className="flex justify-center">About Me</h1>
         <br />
+        <p className="text-lg">Hello! My name is Monte Yoon.</p>
         <br />
         <p className="text-lg">
           I am a front-end developer specializing in building web applications
-          with React and its framework, Next.js. Currently, I work as a
-          contractor for&nbsp;
+          in Javascript, Typescript, React and its framework, Next.js.
+          Currently, I work as a software developer for&nbsp;
           <a
             href="https://zoohilldata.com/"
             rel="noopener noreferrer"
