@@ -135,10 +135,6 @@ a {
   font-weight: bold;
   transition-duration: 300ms;
 }
-/* a:hover {
-  opacity: 90;
-  scale: 1.2;
-} */
 
 textarea:focus,
 input:focus,
