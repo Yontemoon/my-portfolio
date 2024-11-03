@@ -4,22 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { fira_sans } from "../ui/fonts";
 import ExternalLink from "./ExternalLink";
-
-const themes = [
-  "default",
-  "fiesta",
-  "nostalgia",
-  "ikea",
-  "mint-chocolate",
-  "cambridge",
-  "ocean",
-  "moody",
-  "charlie-brown",
-  "museum",
-  "fall",
-  "aquarium",
-  "mirage",
-];
+import { THEMES } from "../lib/constants";
 
 const ThemeSelector = ({
   setShowThemes,
@@ -42,9 +27,11 @@ const ThemeSelector = ({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
+        key={"overlay"}
       />
 
       <motion.div
+        key={"selectSection"}
         className="fixed left-1/2 top-1/2 lg:w-1/4 w-4/5 lg:m-0 bg-about h-auto z-50 rounded-xl shadow-xl p-3 cursor-default"
         transition={{ ease: "easeOut", duration: 0.3, type: "spring" }}
         initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
@@ -55,14 +42,14 @@ const ThemeSelector = ({
 
         <select
           name="theme"
-          id="color-them"
+          id="color-theme"
           defaultValue={theme}
           className="my-2 w-full p-3 rounded-lg bg-projects text-primary_text shadow-lg cursor-pointer"
           onChange={toggleTheme}
         >
-          {themes.map((t) => (
+          {THEMES.map((t, index) => (
             <option
-              key={t}
+              key={index}
               value={t}
               className={clsx(
                 "checked:bg-contact  bg-projects text-primary_text ",
