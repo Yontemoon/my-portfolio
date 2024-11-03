@@ -96,7 +96,7 @@
 }
 
 * {
-  @apply transition-colors duration-300 ease-in-out;
+  @apply transition-colors duration-100 ease-in-out;
 }
 
 .mini-navbar {
@@ -188,13 +188,13 @@ button:hover {
 }
 
 .fade-animation {
-  animation-delay: 200ms;
-  animation: fade-inout 1.5s cubic-bezier(0.76, 0, 0.24, 1);
+  animation-delay: 150ms;
+  animation: fade-inout 0.5ms cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .delayed-fade-animation {
-  animation-delay: 200ms;
-  animation: name-fade-inout 1.5s cubic-bezier(0.76, 0, 0.24, 1);
+  animation-delay: 150ms;
+  animation: name-fade-inout 600ms cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .opacity {
@@ -202,7 +202,7 @@ button:hover {
 }
 
 .exitIcon {
-  transition: 200ms opacity ease-in-out;
+  transition: 150ms opacity ease-in-out;
   opacity: 0;
 }
 

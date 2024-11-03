@@ -11,17 +11,17 @@ import { nextLocalStorage } from "../lib/utils";
 
 type ThemeContextType = {
   theme: string;
-  setTheme: (theme: string) => void;
   handleThemeChange: (theme: string) => void;
 };
-
+const localTheme = nextLocalStorage()?.getItem("local-theme");
+console.log(localTheme);
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const localTheme = nextLocalStorage()?.getItem("local-theme");
   const [theme, setTheme] = useState(localTheme || "default");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -33,8 +33,19 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     localStorage.setItem("local-theme", newTheme);
   };
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("local-theme");
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+    setMounted(true);
+  }, []);
+
+  // Don't render children until after theme is set
+  if (!mounted) return <div style={{ visibility: "hidden" }} />;
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, handleThemeChange }}>
+    <ThemeContext.Provider value={{ theme, handleThemeChange }}>
       {children}
     </ThemeContext.Provider>
   );
