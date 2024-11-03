@@ -15,12 +15,11 @@ const ThemeButton = ({ className }: { className?: string }) => {
 
   return (
     <>
-      <motion.div
+      <motion.button
         className="relative z-50"
         initial={{ scale: 1 }}
         animate={{ scale: showThemes ? 0 : 1 }}
         transition={{ duration: 0.3 }}
-        transform-origin
         onClick={toggleThemeSelector}
       >
         <motion.h2
@@ -31,7 +30,7 @@ const ThemeButton = ({ className }: { className?: string }) => {
         >
           Themes
         </motion.h2>
-      </motion.div>
+      </motion.button>
       {showThemes && <ThemeSelector setShowThemes={setShowThemes} />}
     </>
   );
