@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
-import { routes } from "../../lib/routes";
+import { ROUTES } from "../../lib/constants";
 import clsx from "clsx";
 import "./layoutShift.css";
 
@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   useEffect(() => {
-    const currentIndex = routes.findIndex(
+    const currentIndex = ROUTES.findIndex(
       (route) => route === pathname.substring(1)
     );
     if (active !== currentIndex) {
@@ -31,7 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     if (active === null) return;
-    const currentIndex = routes.findIndex(
+    const currentIndex = ROUTES.findIndex(
       (route) => route === pathname.substring(1)
     );
 
@@ -69,7 +69,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 : "initial"
             }
             transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
-            onClick={() => handleRoute(i, routes[i])}
+            onClick={() => handleRoute(i, ROUTES[i])}
             style={{
               overflow: "hidden",
               cursor: cursorStyle,
