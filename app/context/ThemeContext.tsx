@@ -15,7 +15,7 @@ type ThemeContextType = {
   handleThemeChange: (theme: string) => void;
 };
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
@@ -42,7 +42,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
-  if (context === undefined) {
+  if (context == null) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
