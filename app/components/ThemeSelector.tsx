@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "../context/ThemeContext";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
-import { fira_sans } from "../ui/fonts";
+import { fira_sans } from "../lib/fonts";
 import ExternalLink from "./ExternalLink";
 import { THEMES } from "../lib/constants";
 
