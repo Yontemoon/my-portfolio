@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { fira_sans } from "@/app/ui/fonts";
+import { fira_sans } from "./lib/fonts";
 import clsx from "clsx";
 import { ThemeProvider } from "./context/ThemeContext";
 
