@@ -23,7 +23,7 @@ const ProjectLink = ({
         <div className="gap-4 flex justify-center lg:justify-start">
           <a
             href={link_to_case}
-            className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 "
+            className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 hover:no-underline"
             rel="noreferrer"
             target="_blank"
           >
@@ -31,7 +31,7 @@ const ProjectLink = ({
           </a>
           <a
             href={link_to_site}
-            className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10"
+            className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 hover:no-underline"
             rel="noreferrer"
             target="_blank"
           >

@@ -136,6 +136,10 @@ a {
   transition-duration: 300ms;
 }
 
+a:hover {
+  text-decoration-line: underline;
+}
+
 textarea:focus,
 input:focus,
 input[type]:focus,
