@@ -44,7 +44,7 @@ const ThemeSelector = ({
           name="theme"
           id="color-theme"
           defaultValue={theme}
-          className="my-2 w-full p-3 rounded-lg bg-projects text-primary_text shadow-lg cursor-pointer"
+          className="my-2 w-full p-3 rounded-lg bg-projects text-primary_text shadow-lg cursor-pointer fira_sans.className"
           onChange={toggleTheme}
         >
           {THEMES.map((t, index) => (

@@ -14,12 +14,10 @@ type ThemeContextType = {
   handleThemeChange: (theme: string) => void;
 };
 const localTheme = nextLocalStorage()?.getItem("local-theme");
-console.log(localTheme);
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
-  console.log(context);
   if (context == null) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
@@ -50,7 +48,6 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     setMounted(true);
   }, []);
 
-  // Don't render children until after theme is set
   if (!mounted) return <div style={{ visibility: "hidden" }} />;
 
   return (
