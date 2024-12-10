@@ -17,9 +17,12 @@ const ProjectLink = ({
 }: PropTypes) => {
   return (
     <div className="w-full xl:w-3/4 p-4 m-5 bg-opacity-40 rounded-lg bg-gray-500 shadow-md duration-500 grid lg:grid-cols-3 grid-cols-1 gap-5">
-      <div className="flex flex-col gap-5 col-span-2">
-        <h2 className="font-semibold tracking-wide">{title}</h2>
-        <p className="">{project_description}</p>
+      <div className="flex flex-col gap-5 col-span-2 justify-between">
+        <div className="flex flex-col gap-3">
+          <h2 className="font-semibold tracking-wide">{title}</h2>
+          <p className="">{project_description}</p>
+        </div>
+
         <div className="gap-4 flex justify-center lg:justify-start">
           <a
             href={link_to_case}
