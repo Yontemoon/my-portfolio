@@ -2,7 +2,7 @@ import ProjectLink from "./ProjectLink"
 import ProjectIcon from "../icons/ProjectIcon"
 import movieNextjs from "@images/movie-nextjs.jpg"
 import simplePop from "@images/simple-population.jpg"
-import patina from "@images/patina.jpg"
+import patina from "@images/patina-image.jpg"
 
 const MaxProjectsPage = () => {
   return (
