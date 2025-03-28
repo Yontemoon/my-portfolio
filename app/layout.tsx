@@ -3,6 +3,7 @@ import './globals.css'
 import { fira_sans } from './lib/fonts'
 import clsx from 'clsx'
 import { ThemeProvider } from './context/ThemeContext'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: "Monte Yoon's Portfolio",
@@ -26,6 +27,7 @@ export default function RootLayout({
           fira_sans.className,
           'relative flex w-screen h-screen box-border antialiased text-primary_text',
         )}>
+        <Analytics />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
