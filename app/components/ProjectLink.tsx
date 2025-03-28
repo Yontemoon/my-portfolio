@@ -1,12 +1,12 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image"
 
 type PropTypes = {
-  title: string;
-  project_description: string;
-  image: StaticImageData;
-  link_to_case: string;
-  link_to_site: string;
-};
+  title: string
+  project_description: string
+  image: StaticImageData
+  link_to_case?: string
+  link_to_site: string
+}
 
 const ProjectLink = ({
   title,
@@ -24,14 +24,16 @@ const ProjectLink = ({
         </div>
 
         <div className="gap-4 flex justify-center lg:justify-start">
-          <a
-            href={link_to_case}
-            className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 hover:no-underline"
-            rel="noreferrer"
-            target="_blank"
-          >
-            View Code
-          </a>
+          {link_to_case && (
+            <a
+              href={link_to_case}
+              className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 hover:no-underline"
+              rel="noreferrer"
+              target="_blank"
+            >
+              View Code
+            </a>
+          )}
           <a
             href={link_to_site}
             className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 hover:no-underline"
@@ -54,7 +56,7 @@ const ProjectLink = ({
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectLink;
+export default ProjectLink
