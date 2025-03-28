@@ -1,11 +1,11 @@
-import AboutIcon from "../icons/AboutIcon";
+import AboutIcon from '../icons/AboutIcon'
 
 const MaxAboutPage = () => {
   return (
     <main className="delayed-fade-animation p-4 fade-animation w-full flex justify-center overflow-y-auto scroll-style">
       <div className="max-w-screen-sm m-4">
         <div className="flex justify-center m-5">
-          <AboutIcon color={"black"} width={40} />
+          <AboutIcon color={'black'} width={40} />
         </div>
         <h1 className="flex justify-center">About Me</h1>
         <br />
@@ -18,8 +18,7 @@ const MaxAboutPage = () => {
           <a
             href="https://zoohilldata.com/"
             rel="noopener noreferrer"
-            target="_blank"
-          >
+            target="_blank">
             Zoo Hill Data
           </a>
           , a software development company based in Seattle, Washington.
@@ -38,20 +37,15 @@ const MaxAboutPage = () => {
           <a
             href="https://letterboxd.com/Holycrabs/"
             rel="noopener noreferrer"
-            target="_blank"
-          >
+            target="_blank">
             movies
           </a>
           , practicing jiu-jitsu, and climbing bouldering gyms.
         </p>
         <br />
-        {/* <h2>Front-end Tools</h2>
-        <div className="grid grid-cols-6 mt-5">
-          <Javascript />
-        </div> */}
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default MaxAboutPage;
+export default MaxAboutPage

@@ -1,5 +1,5 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import * as React from 'react'
+import { SVGProps } from 'react'
 const ArrowUpRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,7 @@ const ArrowUpRight = (props: SVGProps<SVGSVGElement>) => (
     strokeLinejoin="round"
     strokeWidth={2}
     className="feather feather-arrow-up-right duration-200"
-    {...props}
-  >
+    {...props}>
     <path d="M7 17 17 7M7 7h10v10" />
   </svg>
 )

@@ -4,9 +4,9 @@ const ExternalLink = ({
   children,
   ...props
 }: {
-  href: string;
-  className?: string;
-  children: React.ReactNode;
+  href: string
+  className?: string
+  children: React.ReactNode
 }) => {
   return (
     <a
@@ -14,11 +14,10 @@ const ExternalLink = ({
       rel="noopener noreferrer"
       target="_blank"
       className={className}
-      {...props}
-    >
+      {...props}>
       {children}
     </a>
-  );
-};
+  )
+}
 
-export default ExternalLink;
+export default ExternalLink

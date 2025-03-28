@@ -1,27 +1,27 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-"use client";
+'use client'
 
-import Layout from "./components/animation/LayoutShift";
-import { useEffect, useState } from "react";
-import MaxAboutPage from "./components/MaxAboutPage";
-import MaxProjectsPage from "./components/MaxProjectsPage";
-import MaxContactPage from "./components/MaxContactPage";
-import MiniPage from "./components/MiniPage";
-import { usePathname } from "next/navigation";
-import AboutIcon from "./icons/AboutIcon";
-import ContactIcon from "./icons/ContactIcon";
-import ProjectIcon from "./icons/ProjectIcon";
-import MaxHomePage from "./components/MaxHomePage";
-import MiniHomePage from "./components/MiniHomePage";
+import Layout from './components/animation/LayoutShift'
+import { useEffect, useState } from 'react'
+import MaxAboutPage from './components/MaxAboutPage'
+import MaxProjectsPage from './components/MaxProjectsPage'
+import MaxContactPage from './components/MaxContactPage'
+import MiniPage from './components/MiniPage'
+import { usePathname } from 'next/navigation'
+import AboutIcon from './icons/AboutIcon'
+import ContactIcon from './icons/ContactIcon'
+import ProjectIcon from './icons/ProjectIcon'
+import MaxHomePage from './components/MaxHomePage'
+import MiniHomePage from './components/MiniHomePage'
 
 export default function Home() {
-  const [current, setCurrent] = useState(usePathname().substring(1));
-  const pathName = usePathname().substring(1);
+  const [current, setCurrent] = useState(usePathname().substring(1))
+  const pathName = usePathname().substring(1)
   useEffect(() => {
     if (current !== pathName) {
-      setCurrent(pathName);
+      setCurrent(pathName)
     }
-  });
+  })
 
   return (
     <>
@@ -29,9 +29,8 @@ export default function Home() {
         <div
           className="mini-navbar bg-about"
           id="about"
-          onClick={() => setCurrent("about")}
-        >
-          {current === "about" ? (
+          onClick={() => setCurrent('about')}>
+          {current === 'about' ? (
             <MaxAboutPage />
           ) : (
             <MiniPage header="About Me">
@@ -42,9 +41,8 @@ export default function Home() {
         <div
           id="projects"
           className="mini-navbar bg-projects"
-          onClick={() => setCurrent("projects")}
-        >
-          {current === "projects" ? (
+          onClick={() => setCurrent('projects')}>
+          {current === 'projects' ? (
             <MaxProjectsPage />
           ) : (
             <MiniPage header="My Projects">
@@ -56,9 +54,8 @@ export default function Home() {
         <div
           className="mini-navbar bg-contact"
           id="contact"
-          onClick={() => setCurrent("contact")}
-        >
-          {current === "contact" ? (
+          onClick={() => setCurrent('contact')}>
+          {current === 'contact' ? (
             <MaxContactPage />
           ) : (
             <MiniPage header="Contact Me">
@@ -67,7 +64,7 @@ export default function Home() {
           )}
         </div>
         <div id="home" className="w-full text-black relative">
-          {current === "" ? (
+          {current === '' ? (
             <MaxHomePage />
           ) : (
             <MiniHomePage setCurrent={setCurrent} />
@@ -75,5 +72,5 @@ export default function Home() {
         </div>
       </Layout>
     </>
-  );
+  )
 }

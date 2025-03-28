@@ -1,7 +1,7 @@
-import LetterBoxd from "../icons/LetterBoxedLogo";
-import Linkedin from "../icons/LinkedinIcon";
-import Github from "../icons/GithubIcon";
-import ExternalLink from "./ExternalLink";
+import LetterBoxd from '../icons/LetterBoxedLogo'
+import Linkedin from '../icons/LinkedinIcon'
+import Github from '../icons/GithubIcon'
+import ExternalLink from './ExternalLink'
 
 const MyLinks = () => {
   return (
@@ -16,7 +16,7 @@ const MyLinks = () => {
         <LetterBoxd />
       </ExternalLink>
     </div>
-  );
-};
+  )
+}
 
-export default MyLinks;
+export default MyLinks

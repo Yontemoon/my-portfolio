@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image"
+import Image, { StaticImageData } from 'next/image'
 
 type PropTypes = {
   title: string
@@ -29,8 +29,7 @@ const ProjectLink = ({
               href={link_to_case}
               className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 hover:no-underline"
               rel="noreferrer"
-              target="_blank"
-            >
+              target="_blank">
               View Code
             </a>
           )}
@@ -38,8 +37,7 @@ const ProjectLink = ({
             href={link_to_site}
             className="border-2 rounded p-2 border-primary_text hover:bg-primary_text/10 hover:no-underline"
             rel="noreferrer"
-            target="_blank"
-          >
+            target="_blank">
             Link to Site
           </a>
         </div>

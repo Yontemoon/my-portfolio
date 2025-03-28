@@ -6,7 +6,7 @@ const MiniPage = ({ header, children }: { header: string; children: any }) => {
         <h2 className="text-center p-3 ">{header}</h2>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MiniPage;
+export default MiniPage

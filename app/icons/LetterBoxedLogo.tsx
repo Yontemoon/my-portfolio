@@ -1,13 +1,12 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import * as React from 'react'
+import { SVGProps } from 'react'
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={32}
     height={32}
     viewBox="2 0 509 500"
-    {...props}
-  >
+    {...props}>
     <path
       fill="currentColor"
       fillRule="evenodd"
@@ -16,5 +15,3 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 export default SvgComponent
-
-
